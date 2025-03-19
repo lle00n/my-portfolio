@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+.Container{
+    position: relative;
+}
+
 .App {
-  text-align: center;
+  color: lightgray;
+  font-family: 'Roboto Condensed', sans-serif;
+  position: absolute;
+    background-color: transparent;
+}
+
+.gradientBackground {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgb(83, 159, 231), purple);
+  overflow:hidden;
+  position: fixed;
+  z-index: -1;
 }
 
 .App-logo {
@@ -35,4 +53,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.ProjectSliderSection {
+  display: flex;
+  justify-content: center;
 }

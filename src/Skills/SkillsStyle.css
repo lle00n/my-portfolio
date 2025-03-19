@@ -1,0 +1,12 @@
+.skillsDiv{
+    display: flex;            /* Make the container a flexbox */
+    flex-direction: column;   /* Arrange items vertically */
+    justify-content: center;  /* Center vertically */
+    align-items: center;
+width: 100vw;
+height: 100vh;
+}
+
+.skillsTitle{
+    font-size: 80px;
+}
