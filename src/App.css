@@ -67,3 +67,7 @@
   display: flex;
   justify-content: center;
 }
+
+.IntroductionText{
+  width:100%;
+}
