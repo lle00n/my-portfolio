@@ -1,0 +1,19 @@
+.introductionTextDiv{ 
+width: 100vw;
+height: 100vh;
+display: flex;
+}
+
+.skillsTitle{
+    font-size: 80px;
+}
+
+.introductionTextSection{
+    width: 50%;
+    padding-left: 50px;
+}
+
+.introductionImage{
+    width: 50%;
+    height: 300px;
+}

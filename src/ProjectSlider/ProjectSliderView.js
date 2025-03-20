@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import navigateBack from '../Images/Icons/back.png';
 import navigateNext from '../Images/Icons/next.png';
+import { useTranslation } from "react-i18next";
 
 import './ProjectSliderStyle.css';
 
@@ -8,6 +9,7 @@ function ProjectSlider() {
     const [currentlyDisplayedProject, setCurrentlyDisplayedProject] = useState("Project1");
     const [currentlyDisplayedProjectCounter, setCurrentlyDisplayedProjectCounter] = useState(1);
     const totalProjects = 5;
+    const { t } = useTranslation(); 
 
 
   const [array] = useState(['Item 1', 'Item 2', 'Item 3', 'Item 4']);
@@ -26,7 +28,7 @@ function ProjectSlider() {
 
   return (
     <div className="ProjectSliderView">
-        <h2 className="ProjectSliderTitle">Current Projects</h2>
+        <h2 className="ProjectSliderTitle">{t("projectsTitle")}</h2>
         <div id="ProjectSlider">
           <div className="ProjectDetails">
             <div className="ProjectImage"></div>
