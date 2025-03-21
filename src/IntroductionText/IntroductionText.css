@@ -1,7 +1,10 @@
 .introductionTextDiv{ 
 width: 100vw;
-height: 100vh;
-display: flex;
+height: 150vh;
+display: flex;            /* Make the container a flexbox */
+flex-direction: column;   /* Arrange items vertically */
+justify-content: center;  /* Center vertically */
+align-items: center;
 }
 
 .skillsTitle{

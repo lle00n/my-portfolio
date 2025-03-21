@@ -7,6 +7,7 @@ import Skills from './Skills/SkillsView.js';
 import IntroductionText from './IntroductionText/IntroductionTextView.js';
 import React, { useRef, useState, useEffect } from "react";
 import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher.js";
+import Blueprint from "./Blueprint/BlueprintView.js"
 import { useTranslation } from "react-i18next";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <div className="ProjectSliderSection">
     <ProjectSlider />
     </div>
+    <Blueprint />
     <Footer />
     </div>
     <div className="gradientBackground"></div>
