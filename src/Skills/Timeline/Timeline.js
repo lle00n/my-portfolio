@@ -28,7 +28,7 @@ const timelineData = [
     title: "Software Developer",
     date: "2022 - 2024",
     description: "Started working as a software engineer in a tech company.",
-    languages: ["swift", "js", "ts","html","css","git","scrum","react","xcode"],
+    languages: ["swift", "js", "ts","html","css","git","scrum","react","xcode","java"],
     color: "purple",
   },
 ];
