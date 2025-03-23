@@ -1,4 +1,6 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -34,9 +36,10 @@ const timelineData = [
 ];
 
 const Timeline = ({ onHover }) => {
+  const { t } = useTranslation(); 
   return (
     <div>
-      <h2 className="skillsTitle">My Journey</h2>
+      <h2 className="skillsTitle">{t("timelineTitle")}</h2>
       <VerticalTimeline>
         {timelineData.map((event) => (
           <VerticalTimelineElement

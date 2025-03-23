@@ -1,8 +1,14 @@
 {
     "browserTitle": "My portfolio",
+
     "typingTitleSmall": "Hello, I'm",
+
     "aboutMeTitle": "About me",
     "introductionText":"Hi, I'm Léon, 22 years old and a passionate software developer. My journey into the world of IT began with an apprenticeship as a computer scientist, which I completed with a vocational baccalaureate. After my apprenticeship, I worked as a software developer for two years and was able to gain valuable experience in various projects. I am passionate about modern technologies, efficient software solutions and innovative developments. My focus is on clean code, scalable applications and a user-friendly design. On my portfolio you will find a selection of my previous work as well as more about my skills and experience. I look forward to exchanging ideas with like-minded people and exciting new projects!",
+    
+    "timelineTitle": "My career",
+
     "projectsTitle": "Projects",
+    
     "contactMeTitle": "Contact me"
   }

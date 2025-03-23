@@ -9,7 +9,7 @@ function TypingTitle() {
     <div className="typingTitleDiv">
         <h1>{t("typingTitleSmall")}</h1>
     <h1 className="typingTitle">
-      <Typewriter words={["Léon Albert!"]} 
+      <Typewriter words={["Léon Albert"]} 
             typeSpeed={200}  // Typing speed
           deleteSpeed={50} // Speed at which text is deleted
           loop={Infinity}

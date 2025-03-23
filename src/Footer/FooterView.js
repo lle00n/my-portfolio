@@ -8,9 +8,14 @@ function Footer() {
   return (
     <div className="typingTitleDiv">
         <h1>{t("contactMeTitle")}</h1>
-   <a href="mailto:example@example.com?subject=Hello%20there&body=This%20is%20a%20predefined%20email%20body."> 
-      54coding
-   </a>
+    <div className="contact-buttons">
+      <a href="mailto:leon.raoul.albert@gmail.com" className="contact-button email">
+      </a>
+      <a href="https://www.linkedin.com/in/l%C3%A9on-a-10535622b/" target="_blank" rel="noopener noreferrer" className="contact-button linkedin">
+      </a>
+      <a href="https://github.com/lle00n" target="_blank" rel="noopener noreferrer" className="contact-button github">
+      </a>
+    </div>
    {/* <MyThree /> */}
     </div>
   );
