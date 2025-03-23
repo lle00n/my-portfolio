@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import ProjectSlider from './ProjectSlider/ProjectSliderView.js';
 import TypingTitle from './TypingTitle/TypingTitleView.js';

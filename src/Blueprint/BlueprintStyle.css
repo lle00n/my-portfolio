@@ -36,12 +36,6 @@ height: 100vh;
   }
   
   /* Text Styling */
-  h2 {
-    text-transform: uppercase;
-    text-align: center;
-    border-bottom: 1px solid white;
-    padding-bottom: 5px;
-  }
   
   /* Example Room Boxes */
   .blueprint-box {

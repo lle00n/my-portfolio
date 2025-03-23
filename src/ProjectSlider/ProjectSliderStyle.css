@@ -4,7 +4,7 @@
     justify-content: center;  /* Center vertically */
     align-items: center;
     width: 100vw;
-    height: 150vh;
+    height: 200vh;
 }
 
 .ProjectSliderTitle {
@@ -44,7 +44,7 @@
 .ProjectImage {
     height: 500px;
     width: 300px;
-    background-color: khaki;
+    background-color: rgb(236, 155, 230);
 }
 
 .projectNavigations {

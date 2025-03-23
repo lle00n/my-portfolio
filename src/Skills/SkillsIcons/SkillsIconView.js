@@ -1,8 +1,9 @@
 import React from "react";
 import "./SkillsIconView.css"; // Add this for styling
+import icon1 from '../../Images/Icons/skills/Swift.svg';
 
 const skills = [
-  { id: "swift", name: "Swift/SwiftUI", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg" },
+  { id: "swift", name: "Swift/SwiftUI", logo: icon1 },
   { id: "js", name: "JavaScript", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
   { id: "ts", name: "TypeScript", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
   { id: "java", name: "Java", logo: "https://upload.wikimedia.org/wikipedia/de/e/e1/Java-Logo.svg" },
