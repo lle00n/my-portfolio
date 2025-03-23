@@ -2,7 +2,7 @@
     display: flex;      /* Arrange items vertically */
     justify-content: center;
 width: 100vw;
-height: 100vh;
+height: 150vh;
 }
 
 .skillsTitle{

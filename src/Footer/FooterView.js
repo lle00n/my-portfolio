@@ -6,7 +6,7 @@ function Footer() {
   const { t } = useTranslation(); 
 
   return (
-    <div className="typingTitleDiv">
+    <div className="footerDiv">
         <h1>{t("contactMeTitle")}</h1>
     <div className="contact-buttons">
       <a href="mailto:leon.raoul.albert@gmail.com" className="contact-button email">

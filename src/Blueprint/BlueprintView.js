@@ -6,7 +6,7 @@ function Blueprint() {
   const { t } = useTranslation(); 
 
   return (
-    <div className="typingTitleDiv">
+    <div className="blueprintDiv">
     <div className="blueprint-container">
       {/* Grid Lines */}
       <div className="grid-overlay"></div>
