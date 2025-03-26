@@ -9,6 +9,34 @@
     "timelineTitle": "My career",
 
     "projectsTitle": "Projects",
+    "educationSections": [
+      {
+        "id": 1,
+        "title": "Apprenticeship - Basic year",
+        "date": "2018 - 2019",
+        "description": "Completed my education with a degree in Computer Science.",
+        "languages": ["js", "ts", "java", "php", "html", "css", "git", "scrum", "mysql"],
+        "color": "purple"
+      },
+      {
+        "id": 2,
+        "title": "Apprenticeship - Mobile Team",
+        "date": "2019 - 2022",
+        "description": "Started working as a software engineer in a tech company.",
+        "languages": ["js", "java", "git", "scrum", "swift", "xcode", "kotlin"],
+        "color": "purple"
+      },
+      {
+        "id": 3,
+        "title": "Software Developer",
+        "date": "2022 - 2024",
+        "description": "Started working as a software engineer in a tech company.",
+        "languages": ["swift", "js", "ts", "html", "css", "git", "scrum", "react", "xcode", "java"],
+        "color": "purple"
+      }
+    ],
+
+    "blueprintTitle": "Website - Architecture",
     
     "contactMeTitle": "Contact me"
   }

@@ -12,8 +12,8 @@ height: 150vh;
 }
 .blueprint-container {
     position: relative;
-    width: 600px; /* Adjust size */
-    height: 400px;
+    width: 1000px; /* Adjust size */
+    height: 600px;
     background-color: #0a2a43; /* Blueprint dark blue */
     color: white;
     border: 2px solid white;

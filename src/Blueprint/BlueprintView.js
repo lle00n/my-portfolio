@@ -7,13 +7,13 @@ function Blueprint() {
 
   return (
     <div className="blueprintDiv">
+    <h2>{t("blueprintTitle")}</h2>
     <div className="blueprint-container">
       {/* Grid Lines */}
       <div className="grid-overlay"></div>
 
       {/* Sample Content */}
       <div className="blueprint-content">
-        <h2>Blueprint Design</h2>
         <p>Room Layout with Measurements</p>
         <div className="blueprint-box">Living Room</div>
         <div className="blueprint-box">Kitchen</div>

@@ -18,7 +18,7 @@ height: 150vh;
 
 .technologies{
     width: 50%;
-    height: 100vh;
+    height: 150vh;
     display: flex;            /* Make the container a flexbox */
     flex-direction: column;   /* Arrange items vertically */
     justify-content: center;  /* Center vertically */
