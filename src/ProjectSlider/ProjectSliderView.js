@@ -6,23 +6,22 @@ import { useTranslation } from "react-i18next";
 import './ProjectSliderStyle.css';
 
 function ProjectSlider() {
-    const [currentlyDisplayedProject, setCurrentlyDisplayedProject] = useState("Project1");
-    const [currentlyDisplayedProjectCounter, setCurrentlyDisplayedProjectCounter] = useState(1);
-    const totalProjects = 5;
     const { t } = useTranslation(); 
+    const projectsArray = t('projects', { returnObjects: true });
 
 
   const [array] = useState(['Item 1', 'Item 2', 'Item 3', 'Item 4']);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const currentProjectImage = require(`../Images/Projects/${projectsArray[currentIndex].title}Cover.png`);
 
     function handleNextCall() {
         setCurrentIndex((prevIndex) =>
-          prevIndex < array.length - 1 ? prevIndex + 1 : 0
+          prevIndex < projectsArray.length - 1 ? prevIndex + 1 : 0
         );
       }
       function handlePreviousCall() {
         setCurrentIndex((prevIndex) =>
-          prevIndex > 0 ? prevIndex - 1 : array.length - 1
+          prevIndex > 0 ? prevIndex - 1 : projectsArray.length - 1
         );
       }
 
@@ -31,11 +30,15 @@ function ProjectSlider() {
         <h2 className="ProjectSliderTitle">{t("projectsTitle")}</h2>
         <div id="ProjectSlider">
           <div className="ProjectDetails">
-            <div className="ProjectImage"></div>
+            <div className="ProjectImageDiv">
+                        <img className="ProjectImage" src={currentProjectImage} alt={`${projectsArray[currentIndex].title}Cover`} />
+</div>
             <div className="ProjectInformation">
-            <h3 className="ProjectTitle">iOS-Project {currentIndex}</h3>
+            <h3 className="ProjectTitle">{projectsArray[currentIndex].title}</h3>
             <div classname="UsedTechnologies"></div>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    {projectsArray[currentIndex].description.split("\n").map((line, index) => (
+        <p key={index}>{line}</p>
+      ))}
             </div>
           </div>
           <div className="projectNavigations">

@@ -53,6 +53,15 @@
   ],
     
   "projectsTitle": "Projekte",
+  "projects": [
+    {
+      "id": 0,
+      "title": "IntervalTimer",
+      "description": "Dieses Projekt ist ein einfacher, aber praktischer IntervalTimer, den ich mit SwiftUI in Xcode entwickelt habe.\nDer Timer ist besonders für den Einsatz im Sport geeignet, da er es ermöglicht, Trainingsintervalle zu steuern. Nutzer können individuell festgelegte Zeitintervalle für Aktivitäten und Pausen einstellen, was das Training effizienter gestaltet.\nDurch die benutzerfreundliche Oberfläche und die einfache Bedienung wird der Timer zu einem nützlichen Tool für Sportler aller Leistungsstufen.",
+      "languages": ["swift", "git", "xcode"],
+      "github": "-"
+    }
+  ],
 
     "blueprintTitle": "Webseite - Architektur",
     
