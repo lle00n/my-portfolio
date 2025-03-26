@@ -35,10 +35,18 @@
     border: none;
 }
 
+.sliderButtonLeft:hover {
+    transform: scale(1.2);
+}
+
 .sliderButtonRight {
     float: right;
     background: none;
     border: none;
+}
+
+.sliderButtonRight:hover {
+    transform: scale(1.2);
 }
 
 .ProjectImage {

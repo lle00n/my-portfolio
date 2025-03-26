@@ -5,14 +5,20 @@ import React, { useState } from "react";
 
 function Skills() {
   const [highlightedLanguages, setHighlightedLanguages] = useState([]);
+  const [highlightedSection, setHighlightedSection] = useState(0);
+
+  const handleHover = (languages, section) => {
+    setHighlightedLanguages(languages);
+    setHighlightedSection(section);
+  };
 
   return (
     <div className="skillsDiv"> 
     <div className="timeline">
-      <Timeline onHover={setHighlightedLanguages} />
+      <Timeline onHover={handleHover} />
         </div>
         <div className="technologies">
-          <SkillsIconView highlightedLanguages={highlightedLanguages} />
+          <SkillsIconView highlightedLanguages={highlightedLanguages} highlightedSection={highlightedSection} />
         </div>
     </div>
   );

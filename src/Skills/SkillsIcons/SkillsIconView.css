@@ -1,3 +1,8 @@
+.skillsView {
+  width: 80%;
+  height: 400px;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 icons per row */
@@ -8,8 +13,8 @@
   }
   
   .skill-item img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     opacity: 0.3;
     transition: opacity 0.3s ease-in-out;
   }

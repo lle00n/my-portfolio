@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     document.title = t("browserTitle");
   }, []);
-
+  //  <Blueprint /> before footer
   return (
     <div className="Container">
     <div className="App">
@@ -24,7 +24,6 @@ function App() {
     <div className="ProjectSliderSection">
     <ProjectSlider />
     </div>
-    <Blueprint />
     <Footer />
     </div>
     <div className="gradientBackground"></div>

@@ -8,7 +8,6 @@
     
     "timelineTitle": "My career",
 
-    "projectsTitle": "Projects",
     "educationSections": [
       {
         "id": 1,
@@ -35,6 +34,26 @@
         "color": "purple"
       }
     ],
+    "educationSectionInformations": [
+      {
+        "id": 0,
+        "description": "Hover over the elements to learn more."
+      },
+      {
+        "id": 1,
+        "description": "In the basic training year, I acquired fundamental skills that are essential for software development. From the front end with HTML/CSS and JavaScript to object-oriented programming with Java and PHP to databases and various project management methods, I was able to acquire a solid foundation."
+      },
+      {
+        "id": 2,
+        "description": "During my four-year apprenticeship, I spent three years working intensively in the field of mobile application development. My focus was on iOS development with Swift/SwiftUI, Objective-C and Xcode. I also gained experience in Android development with Kotlin and Java.\nAs a team, we worked according to the Scrum method. I was also able to further develop my skills in automated and manual UI testing. In this context, I also came into contact with CI/CD pipelines in GitLab, which ensured the functionality of the code during both continuous development and releases."
+      },
+      {
+        "id": 3,
+        "description": "In the two years after my apprenticeship, I had the opportunity to work in four different teams, gaining valuable experience and continuously expanding my skillset.\nIn the first two teams, I was involved in the development of mobile applications, working with SwiftUI, Xcode, Kotlin, Java and Android Studio. I was involved in the development of a trading app and an e-banking app.\nIn the other two teams, I focused on the development of web applications with React, TypeScript, JavaScript, HTML and CSS. I was also involved in the further development of a web application for a feedback tool, particularly in the implementation of feedback campaigns."
+      }
+    ],
+    
+    "projectsTitle": "Projects",
 
     "blueprintTitle": "Website - Architecture",
     

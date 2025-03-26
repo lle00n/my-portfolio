@@ -1,5 +1,6 @@
 import React from "react";
 import "./SkillsIconView.css"; // Add this for styling
+import { useTranslation } from "react-i18next";
 import SwiftLogo from '../../Images/Icons/skills/Swift.svg';
 import CSSLogo from '../../Images/Icons/skills/CSS.svg';
 import GitLogo from '../../Images/Icons/skills/GitLogo.svg';
@@ -30,8 +31,13 @@ const skills = [
   { id: "kotlin", name: "Kotlin", logo: KotlinLogo },
 ];
 
-const SkillsIconView = ({ highlightedLanguages = [] }) => {
+const SkillsIconView = ({ highlightedLanguages = [], highlightedSection = 0 }) => {
+  const { t } = useTranslation(); 
+  //const educationSectionTexts = t('educationSectionInformations', { returnObjects: true });
+  const sectionData = t(`educationSectionInformations.${highlightedSection}`, { returnObjects: true });
+
   return (
+    <div className="skillsView">
     <div className="skills-grid">
       {skills.map((skill) => (
         <div key={skill.id} className="skill-item">
@@ -42,6 +48,10 @@ const SkillsIconView = ({ highlightedLanguages = [] }) => {
             className={highlightedLanguages.includes(skill.id) ? "highlighted" : ""}
           />
         </div>
+      ))}
+    </div>
+    {sectionData.description.split("\n").map((line, index) => (
+        <p key={index}>{line}</p>
       ))}
     </div>
   );

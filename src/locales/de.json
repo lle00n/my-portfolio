@@ -7,10 +7,6 @@
     "introductionText":"Hallo, ich bin Léon, 22 Jahre alt und leidenschaftlicher Software-Entwickler.\nMeine Reise in die Welt der Informatik begann mit einer Lehre als Informatiker, die ich mit der Berufsmatura abgeschlossen habe.Nach meiner Ausbildung habe ich zwei Jahre als Software-Entwickler gearbeitet und konnte wertvolle Erfahrungen in verschiedenen Projekten sammeln.\nIch begeistere mich für moderne Technologien, effiziente Softwarelösungen und innovative Entwicklungen. Mein Fokus liegt auf sauberem Code, skalierbaren Anwendungen und einer nutzerfreundlichen Gestaltung.Auf meinem Portfolio findest du eine Auswahl meiner bisherigen Arbeiten sowie mehr über meine Fähigkeiten und Erfahrungen.\nIch freue mich über den Austausch mit Gleichgesinnten und spannende neue Projekte.",
     
     "timelineTitle": "Meine Laufbahn",
-    
-    "projectsTitle": "Projekte",
-
-    
   "educationSections": [
     {
       "id": 1,
@@ -37,6 +33,26 @@
       "color": "purple"
     }
   ],
+  "educationSectionInformations": [
+    {
+      "id": 0,
+      "description": "Fahre über die Elemente, um mehr zu erfahren."
+    },
+    {
+      "id": 1,
+      "description": "Im Basislehrjahr erwarb ich grundlegende Fähigkeiten, die für die Software-Entwicklung unerlässlich sind. Von Frontend mit HTML/CSS und JavaScript über objektorientierte Programmierung mit Java und PHP bis hin zu Datenbanken und verschiedenen Projektmanagement-Methoden konnte ich mir eine fundierte Basis erarbeiten."
+    },
+    {
+      "id": 2,
+      "description": "Während meiner vierjährigen Ausbildung verbrachte ich drei Jahre intensiv im Bereich der mobilen Applikationsentwicklung. Mein Schwerpunkt lag auf der iOS-Entwicklung mit Swift/SwiftUI, Objective-C und Xcode. Darüber hinaus sammelte ich Erfahrungen in der Android-Entwicklung mit Kotlin und Java.\nIm Team arbeiteten wir nach der Scrum-Methode. Zudem konnte ich meine Fähigkeiten in automatisierten sowie manuellen UI-Tests weiterentwickeln. In diesem Zusammenhang kam ich auch mit CI/CD-Pipelines in GitLab in Berührung, die die Funktionalität des Codes sowohl während der kontinuierlichen Entwicklung als auch bei Releases sicherstellten."
+    },
+    {
+      "id": 3,
+      "description": "In den zwei Jahren nach meiner Ausbildung hatte ich die Möglichkeit, in vier verschiedenen Teams zu arbeiten, wertvolle Erfahrungen zu sammeln und mein Skillset kontinuierlich zu erweitern.\nIn den ersten beiden Teams war ich in der Entwicklung mobiler Applikationen tätig, wobei ich mit SwiftUI, Xcode, Kotlin, Java und Android Studio arbeitete. Dabei war ich an der Entwicklung einer Trading- sowie einer E-Banking-App beteiligt.\nIn den anderen beiden Teams konzentrierte ich mich auf die Entwicklung von Webanwendungen mit React, TypeScript, JavaScript, HTML und CSS. Zudem war ich an der Weiterentwicklung einer Webanwendung für ein Feedback-Tool beteiligt, insbesondere bei der Implementierung von Feedback-Kampagnen."
+    }
+  ],
+    
+  "projectsTitle": "Projekte",
 
     "blueprintTitle": "Webseite - Architektur",
     
