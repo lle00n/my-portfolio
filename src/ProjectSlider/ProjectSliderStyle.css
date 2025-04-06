@@ -73,7 +73,6 @@
 
 .ProjectTitle {
     margin: 0px;
-    text-align: center;
 }
 
 /* Mobile styles */
@@ -101,6 +100,7 @@
 
     .ProjectTitle {
         font-size: 50px;
+        text-align: center;
     }
 
     .projectNavigations {

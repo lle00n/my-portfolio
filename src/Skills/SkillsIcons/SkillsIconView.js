@@ -58,9 +58,11 @@ const SkillsIconView = ({ highlightedLanguages = [], highlightedSection = 0 }) =
           </div>
         ))}
       </div>
-      {sectionData.description.split("\n").map((line, index) => (
-        <p key={index}>{line}</p>
-      ))}
+      <div className="timelineDescriptionText">
+        {sectionData.description.split("\n").map((line, index) => (
+          <p key={index}>{line}</p>
+        ))}
+      </div>
     </div>
   );
 };

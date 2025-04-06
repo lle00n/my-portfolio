@@ -6,11 +6,18 @@
  * ----------------------------------------------------------------------------
  */
 
- .skillsTitle {
+.skillsTitle {
     font-size: 80px;
     text-align: center;
 }
 
 .vertical-timeline-element-title {
     color: gray;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .skillsTitle {
+        display: none;
+    }
 }

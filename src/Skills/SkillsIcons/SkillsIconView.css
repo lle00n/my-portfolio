@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
- .skillsView {
+.skillsView {
   width: 80%;
   height: 400px;
 }
@@ -29,4 +29,20 @@
 
 .skill-item img.highlighted {
   opacity: 1;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .skill-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timelineDescriptionText {
+    display: none;
+  }
 }

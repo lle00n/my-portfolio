@@ -6,15 +6,18 @@
  * ----------------------------------------------------------------------------
  */
 
- .skillsDiv {
-    display: flex;
-    justify-content: center;
+.skillsDiv {
     width: 100vw;
     height: 150vh;
+    justify-content: center;
 }
 
-.skillsTitle {
-    font-size: 80px;
+.timelineSkillsContent {
+    display: flex;
+}
+
+.timelineMobileTitle {
+    display: none;
 }
 
 .timeline {
@@ -31,4 +34,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .technologies {
+        height: 60vh;
+    }
+
+    .skillsDiv {
+        height: 60vh;
+    }
+
+    .timelineMobileTitle {
+        display: block;
+        text-align: center;
+        font-size: 50px;
+    }
 }
