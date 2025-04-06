@@ -12,13 +12,13 @@ const LanguageSwitcher = () => {
   return (
     <div className="languageSwitcherDiv">
       <div class="button-container">
-    <button class="round-button germany" onClick={() => changeLanguage("de")}>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/400px-Flag_of_Germany.svg.png" alt="German Flag" class="flag-image" />
-    </button>
-    <button class="round-button uk" onClick={() => changeLanguage("en")}>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/500px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="UK Flag" class="flag-image" />
-    </button>
-</div>
+        <button class="round-button germany" onClick={() => changeLanguage("de")}>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/400px-Flag_of_Germany.svg.png" alt="German Flag" class="flag-image" />
+        </button>
+        <button class="round-button uk" onClick={() => changeLanguage("en")}>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/500px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="UK Flag" class="flag-image" />
+        </button>
+      </div>
 
     </div>
   );

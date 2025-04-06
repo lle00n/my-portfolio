@@ -32,25 +32,25 @@ const skills = [
 ];
 
 const SkillsIconView = ({ highlightedLanguages = [], highlightedSection = 0 }) => {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
   //const educationSectionTexts = t('educationSectionInformations', { returnObjects: true });
   const sectionData = t(`educationSectionInformations.${highlightedSection}`, { returnObjects: true });
 
   return (
     <div className="skillsView">
-    <div className="skills-grid">
-      {skills.map((skill) => (
-        <div key={skill.id} className="skill-item">
-          <img
-            src={skill.logo}
-            alt={skill.name}
-            title={skill.name}
-            className={highlightedLanguages.includes(skill.id) ? "highlighted" : ""}
-          />
-        </div>
-      ))}
-    </div>
-    {sectionData.description.split("\n").map((line, index) => (
+      <div className="skills-grid">
+        {skills.map((skill) => (
+          <div key={skill.id} className="skill-item">
+            <img
+              src={skill.logo}
+              alt={skill.name}
+              title={skill.name}
+              className={highlightedLanguages.includes(skill.id) ? "highlighted" : ""}
+            />
+          </div>
+        ))}
+      </div>
+      {sectionData.description.split("\n").map((line, index) => (
         <p key={index}>{line}</p>
       ))}
     </div>

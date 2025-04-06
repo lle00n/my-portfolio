@@ -1,70 +1,96 @@
 {
-    "browserTitle": "My portfolio",
-
-    "typingTitleSmall": "Hello, I'm",
-
-    "aboutMeTitle": "About me",
-    "introductionText":"Hi, I'm Léon, 22 years old and a passionate software developer.\nMy journey into the world of computer science began with an apprenticeship as a computer scientist, which I completed with a vocational baccalaureate.After my training, I worked as a software developer for two years and was able to gain valuable experience in various projects.\nI am passionate about modern technologies, efficient software solutions and innovative developments. My focus is on clean code, scalable applications and a user-friendly design. You can find a selection of my previous work and more about my skills and experience in my portfolio.\nI look forward to exchanging ideas with like-minded people and exciting new projects.",
-    
-    "timelineTitle": "My career",
-
-    "educationSections": [
-      {
-        "id": 1,
-        "title": "Apprenticeship - Basic year",
-        "date": "2018 - 2019",
-        "description": "Completed my education with a degree in Computer Science.",
-        "languages": ["js", "ts", "java", "php", "html", "css", "git", "scrum", "mysql"],
-        "color": "purple"
-      },
-      {
-        "id": 2,
-        "title": "Apprenticeship - Mobile Team",
-        "date": "2019 - 2022",
-        "description": "Started working as a software engineer in a tech company.",
-        "languages": ["js", "java", "git", "scrum", "swift", "xcode", "kotlin"],
-        "color": "purple"
-      },
-      {
-        "id": 3,
-        "title": "Software Developer",
-        "date": "2022 - 2024",
-        "description": "Started working as a software engineer in a tech company.",
-        "languages": ["swift", "js", "ts", "html", "css", "git", "scrum", "react", "xcode", "java"],
-        "color": "purple"
-      }
-    ],
-    "educationSectionInformations": [
-      {
-        "id": 0,
-        "description": "Hover over the elements to learn more."
-      },
-      {
-        "id": 1,
-        "description": "In the basic training year, I acquired fundamental skills that are essential for software development. From the front end with HTML/CSS and JavaScript to object-oriented programming with Java and PHP to databases and various project management methods, I was able to acquire a solid foundation."
-      },
-      {
-        "id": 2,
-        "description": "During my four-year apprenticeship, I spent three years working intensively in the field of mobile application development. My focus was on iOS development with Swift/SwiftUI, Objective-C and Xcode. I also gained experience in Android development with Kotlin and Java.\nAs a team, we worked according to the Scrum method. I was also able to further develop my skills in automated and manual UI testing. In this context, I also came into contact with CI/CD pipelines in GitLab, which ensured the functionality of the code during both continuous development and releases."
-      },
-      {
-        "id": 3,
-        "description": "In the two years after my apprenticeship, I had the opportunity to work in four different teams, gaining valuable experience and continuously expanding my skillset.\nIn the first two teams, I was involved in the development of mobile applications, working with SwiftUI, Xcode, Kotlin, Java and Android Studio. I was involved in the development of a trading app and an e-banking app.\nIn the other two teams, I focused on the development of web applications with React, TypeScript, JavaScript, HTML and CSS. I was also involved in the further development of a web application for a feedback tool, particularly in the implementation of feedback campaigns."
-      }
-    ],
-    
-    "projectsTitle": "Projects",
-    "projects": [
-      {
-        "id": 0,
-        "title": "IntervalTimer",
-        "description": "This project is a simple but practical interval timer that I developed with SwiftUI in Xcode.\nThe timer is particularly suitable for use in sports, as it makes it possible to control training intervals. Users can set individually defined time intervals for activities and breaks, which makes training more efficient.\nThe user-friendly interface and ease of use make the timer a useful tool for athletes of all levels.",
-        "languages": ["swift", "git", "xcode"],
-        "github": "-"
-      }
-    ],
-
-    "blueprintTitle": "Website - Architecture",
-    
-    "contactMeTitle": "Contact me"
-  }
+  "browserTitle": "My portfolio",
+  "typingTitleSmall": "Hello, I'm",
+  "aboutMeTitle": "About me",
+  "introductionText": "Hi, I'm Léon, 22 years old and a passionate software developer.\nMy journey into the world of computer science began with an apprenticeship as a computer scientist, which I completed with a vocational baccalaureate.After my training, I worked as a software developer for two years and was able to gain valuable experience in various projects.\nI am passionate about modern technologies, efficient software solutions and innovative developments. My focus is on clean code, scalable applications and a user-friendly design. You can find a selection of my previous work and more about my skills and experience in my portfolio.\nI look forward to exchanging ideas with like-minded people and exciting new projects.",
+  "timelineTitle": "My career",
+  "educationSections": [
+    {
+      "id": 1,
+      "title": "Apprenticeship - Basic year",
+      "date": "2018 - 2019",
+      "description": "Completed my education with a degree in Computer Science.",
+      "languages": [
+        "js",
+        "ts",
+        "java",
+        "php",
+        "html",
+        "css",
+        "git",
+        "scrum",
+        "mysql"
+      ],
+      "color": "purple"
+    },
+    {
+      "id": 2,
+      "title": "Apprenticeship - Mobile Team",
+      "date": "2019 - 2022",
+      "description": "Started working as a software engineer in a tech company.",
+      "languages": [
+        "js",
+        "java",
+        "git",
+        "scrum",
+        "swift",
+        "xcode",
+        "kotlin"
+      ],
+      "color": "purple"
+    },
+    {
+      "id": 3,
+      "title": "Software Developer",
+      "date": "2022 - 2024",
+      "description": "Started working as a software engineer in a tech company.",
+      "languages": [
+        "swift",
+        "js",
+        "ts",
+        "html",
+        "css",
+        "git",
+        "scrum",
+        "react",
+        "xcode",
+        "java"
+      ],
+      "color": "purple"
+    }
+  ],
+  "educationSectionInformations": [
+    {
+      "id": 0,
+      "description": "Hover over the elements to learn more."
+    },
+    {
+      "id": 1,
+      "description": "In the basic training year, I acquired fundamental skills that are essential for software development. From the front end with HTML/CSS and JavaScript to object-oriented programming with Java and PHP to databases and various project management methods, I was able to acquire a solid foundation."
+    },
+    {
+      "id": 2,
+      "description": "During my four-year apprenticeship, I spent three years working intensively in the field of mobile application development. My focus was on iOS development with Swift/SwiftUI, Objective-C and Xcode. I also gained experience in Android development with Kotlin and Java.\nAs a team, we worked according to the Scrum method. I was also able to further develop my skills in automated and manual UI testing. In this context, I also came into contact with CI/CD pipelines in GitLab, which ensured the functionality of the code during both continuous development and releases."
+    },
+    {
+      "id": 3,
+      "description": "In the two years after my apprenticeship, I had the opportunity to work in four different teams, gaining valuable experience and continuously expanding my skillset.\nIn the first two teams, I was involved in the development of mobile applications, working with SwiftUI, Xcode, Kotlin, Java and Android Studio. I was involved in the development of a trading app and an e-banking app.\nIn the other two teams, I focused on the development of web applications with React, TypeScript, JavaScript, HTML and CSS. I was also involved in the further development of a web application for a feedback tool, particularly in the implementation of feedback campaigns."
+    }
+  ],
+  "projectsTitle": "Projects",
+  "projects": [
+    {
+      "id": 0,
+      "title": "IntervalTimer",
+      "description": "This project is a simple but practical interval timer that I developed with SwiftUI in Xcode.\nThe timer is particularly suitable for use in sports, as it makes it possible to control training intervals. Users can set individually defined time intervals for activities and breaks, which makes training more efficient.\nThe user-friendly interface and ease of use make the timer a useful tool for athletes of all levels.",
+      "languages": [
+        "swift",
+        "git",
+        "xcode"
+      ],
+      "github": "-"
+    }
+  ],
+  "blueprintTitle": "Website - Architecture",
+  "contactMeTitle": "Contact me"
+}

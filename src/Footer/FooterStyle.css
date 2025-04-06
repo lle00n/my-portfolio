@@ -1,45 +1,49 @@
 .footerDiv {
-  display: flex;            /* Make the container a flexbox */
-  flex-direction: column;   /* Arrange items vertically */
-  justify-content: center;  /* Center vertically */
+  display: flex;
+  /* Make the container a flexbox */
+  flex-direction: column;
+  /* Arrange items vertically */
+  justify-content: center;
+  /* Center vertically */
   align-items: center;
-width: 100vw;
-height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Space between buttons */
-  }
-  
-  .contact-button {
-    width: 50px;  /* Size of the button */
-    height: 50px;
-    background-size: cover;
-  }
-  
-  .contact-button:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Email Button with envelope icon */
-  .contact-button.email {
-    background-image: url('../Images/Icons/Contact/email.svg');
-    background-color: transparent;
-  }
-  
-  /* LinkedIn Button */
-  .contact-button.linkedin {
-    background-image: url('../Images/Icons/Contact/Linkedin.svg');
-    background-color: transparent;
-  }
-  
-  /* GitHub Button */
-  .contact-button.github {
-    background-image: url('../Images/Icons/Contact/GitHub.svg');
-    background-color: transparent;
-  }
-  
-  /* Optional: Add a border or any styling you'd like to the buttons */
-  
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  /* Space between buttons */
+}
+
+.contact-button {
+  width: 50px;
+  /* Size of the button */
+  height: 50px;
+  background-size: cover;
+}
+
+.contact-button:hover {
+  transform: scale(1.1);
+}
+
+/* Email Button with envelope icon */
+.contact-button.email {
+  background-image: url('../Images/Icons/Contact/email.svg');
+  background-color: transparent;
+}
+
+/* LinkedIn Button */
+.contact-button.linkedin {
+  background-image: url('../Images/Icons/Contact/Linkedin.svg');
+  background-color: transparent;
+}
+
+/* GitHub Button */
+.contact-button.github {
+  background-image: url('../Images/Icons/Contact/GitHub.svg');
+  background-color: transparent;
+}
+
+/* Optional: Add a border or any styling you'd like to the buttons */

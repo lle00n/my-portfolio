@@ -13,13 +13,13 @@ function Skills() {
   };
 
   return (
-    <div className="skillsDiv"> 
-    <div className="timeline">
-      <Timeline onHover={handleHover} />
-        </div>
-        <div className="technologies">
-          <SkillsIconView highlightedLanguages={highlightedLanguages} highlightedSection={highlightedSection} />
-        </div>
+    <div className="skillsDiv">
+      <div className="timeline">
+        <Timeline onHover={handleHover} />
+      </div>
+      <div className="technologies">
+        <SkillsIconView highlightedLanguages={highlightedLanguages} highlightedSection={highlightedSection} />
+      </div>
     </div>
   );
 }

@@ -10,26 +10,26 @@ import Blueprint from "./Blueprint/BlueprintView.js"
 import { useTranslation } from "react-i18next";
 
 function App() {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
   useEffect(() => {
     document.title = t("browserTitle");
   }, []);
   //  <Blueprint /> before footer
   return (
     <div className="Container">
-    <div className="App">
-    <TypingTitle />
-    <IntroductionText className="IntroductionText" />
-    <Skills /> 
-    <div className="ProjectSliderSection">
-    <ProjectSlider />
-    </div>
-    <Footer />
-    </div>
-    <div className="gradientBackground"></div>
-    <div className="overlayLanguageSwitch">
-      <LanguageSwitcher />
-    </div>
+      <div className="App">
+        <TypingTitle />
+        <IntroductionText className="IntroductionText" />
+        <Skills />
+        <div className="ProjectSliderSection">
+          <ProjectSlider />
+        </div>
+        <Footer />
+      </div>
+      <div className="gradientBackground"></div>
+      <div className="overlayLanguageSwitch">
+        <LanguageSwitcher />
+      </div>
     </div>
   );
 }

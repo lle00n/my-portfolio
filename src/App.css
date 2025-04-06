@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
-.Container{
-    position: relative;
+.Container {
+  position: relative;
 }
 
 .App {
   color: lightgray;
   font-family: 'Roboto Condensed', sans-serif;
   position: absolute;
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .gradientBackground {
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(rgb(83, 159, 231), purple);
-  overflow:hidden;
+  overflow: hidden;
   position: fixed;
   z-index: -1;
 }
 
-.overlayLanguageSwitch{
+.overlayLanguageSwitch {
   background-color: transparent;
-  overflow:hidden;
+  overflow: hidden;
   position: fixed;
   z-index: 1;
   right: 0;
@@ -58,6 +58,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -68,6 +69,6 @@
   justify-content: center;
 }
 
-.IntroductionText{
-  width:100%;
+.IntroductionText {
+  width: 100%;
 }

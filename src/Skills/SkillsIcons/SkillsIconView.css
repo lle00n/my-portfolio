@@ -4,22 +4,23 @@
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 icons per row */
-    gap: 20px; /* Space between items */
-    justify-items: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .skill-item img {
-    width: 80px;
-    height: 80px;
-    opacity: 0.3;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .skill-item img.highlighted {
-    opacity: 1;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 icons per row */
+  gap: 20px;
+  /* Space between items */
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.skill-item img {
+  width: 80px;
+  height: 80px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skill-item img.highlighted {
+  opacity: 1;
+}

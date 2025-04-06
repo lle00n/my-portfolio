@@ -1,19 +1,26 @@
 {
-    "browserTitle": "Mein Portfolio",
-
-    "typingTitleSmall": "Hallo, Ich bin",
-
-    "aboutMeTitle": "Über mich",
-    "introductionText":"Hallo, ich bin Léon, 22 Jahre alt und leidenschaftlicher Software-Entwickler.\nMeine Reise in die Welt der Informatik begann mit einer Lehre als Informatiker, die ich mit der Berufsmatura abgeschlossen habe.Nach meiner Ausbildung habe ich zwei Jahre als Software-Entwickler gearbeitet und konnte wertvolle Erfahrungen in verschiedenen Projekten sammeln.\nIch begeistere mich für moderne Technologien, effiziente Softwarelösungen und innovative Entwicklungen. Mein Fokus liegt auf sauberem Code, skalierbaren Anwendungen und einer nutzerfreundlichen Gestaltung.Auf meinem Portfolio findest du eine Auswahl meiner bisherigen Arbeiten sowie mehr über meine Fähigkeiten und Erfahrungen.\nIch freue mich über den Austausch mit Gleichgesinnten und spannende neue Projekte.",
-    
-    "timelineTitle": "Meine Laufbahn",
+  "browserTitle": "Mein Portfolio",
+  "typingTitleSmall": "Hallo, Ich bin",
+  "aboutMeTitle": "Über mich",
+  "introductionText": "Hallo, ich bin Léon, 22 Jahre alt und leidenschaftlicher Software-Entwickler.\nMeine Reise in die Welt der Informatik begann mit einer Lehre als Informatiker, die ich mit der Berufsmatura abgeschlossen habe.Nach meiner Ausbildung habe ich zwei Jahre als Software-Entwickler gearbeitet und konnte wertvolle Erfahrungen in verschiedenen Projekten sammeln.\nIch begeistere mich für moderne Technologien, effiziente Softwarelösungen und innovative Entwicklungen. Mein Fokus liegt auf sauberem Code, skalierbaren Anwendungen und einer nutzerfreundlichen Gestaltung.Auf meinem Portfolio findest du eine Auswahl meiner bisherigen Arbeiten sowie mehr über meine Fähigkeiten und Erfahrungen.\nIch freue mich über den Austausch mit Gleichgesinnten und spannende neue Projekte.",
+  "timelineTitle": "Meine Laufbahn",
   "educationSections": [
     {
       "id": 1,
       "title": "Ausbildung - Basislehrjahr",
       "date": "2018 - 2019",
       "description": "Abschluss meiner Ausbildung mit einem Abschluss in Informatik.",
-      "languages": ["js", "ts", "java", "php", "html", "css", "git", "scrum", "mysql"],
+      "languages": [
+        "js",
+        "ts",
+        "java",
+        "php",
+        "html",
+        "css",
+        "git",
+        "scrum",
+        "mysql"
+      ],
       "color": "purple"
     },
     {
@@ -21,7 +28,15 @@
       "title": "Ausbildung - Mobile Team",
       "date": "2019 - 2022",
       "description": "Begann als Softwareentwickler in einem Technologieunternehmen zu arbeiten.",
-      "languages": ["js", "java", "git", "scrum", "swift", "xcode", "kotlin"],
+      "languages": [
+        "js",
+        "java",
+        "git",
+        "scrum",
+        "swift",
+        "xcode",
+        "kotlin"
+      ],
       "color": "purple"
     },
     {
@@ -29,7 +44,18 @@
       "title": "Software Entwickler",
       "date": "2022 - 2024",
       "description": "Begann als Softwareentwickler in einem Technologieunternehmen zu arbeiten.",
-      "languages": ["swift", "js", "ts", "html", "css", "git", "scrum", "react", "xcode", "java"],
+      "languages": [
+        "swift",
+        "js",
+        "ts",
+        "html",
+        "css",
+        "git",
+        "scrum",
+        "react",
+        "xcode",
+        "java"
+      ],
       "color": "purple"
     }
   ],
@@ -51,19 +77,20 @@
       "description": "In den zwei Jahren nach meiner Ausbildung hatte ich die Möglichkeit, in vier verschiedenen Teams zu arbeiten, wertvolle Erfahrungen zu sammeln und mein Skillset kontinuierlich zu erweitern.\nIn den ersten beiden Teams war ich in der Entwicklung mobiler Applikationen tätig, wobei ich mit SwiftUI, Xcode, Kotlin, Java und Android Studio arbeitete. Dabei war ich an der Entwicklung einer Trading- sowie einer E-Banking-App beteiligt.\nIn den anderen beiden Teams konzentrierte ich mich auf die Entwicklung von Webanwendungen mit React, TypeScript, JavaScript, HTML und CSS. Zudem war ich an der Weiterentwicklung einer Webanwendung für ein Feedback-Tool beteiligt, insbesondere bei der Implementierung von Feedback-Kampagnen."
     }
   ],
-    
   "projectsTitle": "Projekte",
   "projects": [
     {
       "id": 0,
       "title": "IntervalTimer",
       "description": "Dieses Projekt ist ein einfacher, aber praktischer IntervalTimer, den ich mit SwiftUI in Xcode entwickelt habe.\nDer Timer ist besonders für den Einsatz im Sport geeignet, da er es ermöglicht, Trainingsintervalle zu steuern. Nutzer können individuell festgelegte Zeitintervalle für Aktivitäten und Pausen einstellen, was das Training effizienter gestaltet.\nDurch die benutzerfreundliche Oberfläche und die einfache Bedienung wird der Timer zu einem nützlichen Tool für Sportler aller Leistungsstufen.",
-      "languages": ["swift", "git", "xcode"],
+      "languages": [
+        "swift",
+        "git",
+        "xcode"
+      ],
       "github": "-"
     }
   ],
-
-    "blueprintTitle": "Webseite - Architektur",
-    
-    "contactMeTitle": "Kontakt"
-  }
+  "blueprintTitle": "Webseite - Architektur",
+  "contactMeTitle": "Kontakt"
+}

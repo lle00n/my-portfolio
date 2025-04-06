@@ -1,26 +1,34 @@
-.skillsDiv{
-    display: flex;      /* Arrange items vertically */
+.skillsDiv {
+    display: flex;
+    /* Arrange items vertically */
     justify-content: center;
-width: 100vw;
-height: 150vh;
+    width: 100vw;
+    height: 150vh;
 }
 
-.skillsTitle{
+.skillsTitle {
     font-size: 80px;
 }
 
-.timeline{
-    width: 50%; 
-    display: flex;            /* Make the container a flexbox */
-    flex-direction: column;  /* Arrange items vertically */
-    justify-content: center;  /* Center vertically *//* Arrange items vertically */
+.timeline {
+    width: 50%;
+    display: flex;
+    /* Make the container a flexbox */
+    flex-direction: column;
+    /* Arrange items vertically */
+    justify-content: center;
+    /* Center vertically */
+    /* Arrange items vertically */
 }
 
-.technologies{
+.technologies {
     width: 50%;
     height: 150vh;
-    display: flex;            /* Make the container a flexbox */
-    flex-direction: column;   /* Arrange items vertically */
-    justify-content: center;  /* Center vertically */
+    display: flex;
+    /* Make the container a flexbox */
+    flex-direction: column;
+    /* Arrange items vertically */
+    justify-content: center;
+    /* Center vertically */
     align-items: center;
 }
