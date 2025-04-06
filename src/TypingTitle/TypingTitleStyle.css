@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-.typingTitleDiv {
+ .typingTitleDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,4 +17,11 @@
 
 .typingTitle {
     font-size: 100px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .typingTitle {
+        font-size: 60px;
+    }
 }
