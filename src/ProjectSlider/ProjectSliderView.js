@@ -36,17 +36,18 @@ function ProjectSlider() {
   return (
     <div className="ProjectSliderView">
       <h2 className="ProjectSliderTitle">{t("projectsTitle")}</h2>
-      <div id="ProjectSlider">
+      <div className="ProjectSlider">
         <div className="ProjectDetails">
           <div className="ProjectImageDiv">
             <img className="ProjectImage" src={currentProjectImage} alt={`${projectsArray[currentIndex].title}Cover`} />
           </div>
           <div className="ProjectInformation">
             <h3 className="ProjectTitle">{projectsArray[currentIndex].title}</h3>
-            <div classname="UsedTechnologies"></div>
+            <div className="ProjectText">
             {projectsArray[currentIndex].description.split("\n").map((line, index) => (
               <p key={index}>{line}</p>
             ))}
+            </div>
           </div>
         </div>
         <div className="projectNavigations">
@@ -63,3 +64,4 @@ function ProjectSlider() {
 }
 
 export default ProjectSlider;
+
