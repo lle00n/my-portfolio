@@ -1,10 +1,15 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the Blueprint-component
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
 .blueprintDiv {
   display: flex;
-  /* Make the container a flexbox */
   flex-direction: column;
-  /* Arrange items vertically */
   justify-content: center;
-  /* Center vertically */
   align-items: center;
   width: 100vw;
   height: 150vh;
@@ -17,19 +22,15 @@
 .blueprint-container {
   position: relative;
   width: 1000px;
-  /* Adjust size */
   height: 600px;
   background-color: #0a2a43;
-  /* Blueprint dark blue */
   color: white;
   border: 2px solid white;
   padding: 20px;
   font-family: "Courier New", monospace;
-  /* Blueprint-style font */
   overflow: hidden;
 }
 
-/* Grid Overlay */
 .grid-overlay {
   position: absolute;
   top: 0;
@@ -42,9 +43,6 @@
   pointer-events: none;
 }
 
-/* Text Styling */
-
-/* Example Room Boxes */
 .blueprint-box {
   width: 150px;
   height: 100px;

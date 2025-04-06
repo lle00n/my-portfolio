@@ -1,3 +1,11 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Component to switch the language
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
 import React from "react";
 import { useTranslation } from "react-i18next";
 import './LanguageSwitcher.css';

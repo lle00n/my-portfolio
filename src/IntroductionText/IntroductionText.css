@@ -1,12 +1,17 @@
-.introductionTextDiv {
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the Introduction-text
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
+ .introductionTextDiv {
     width: 100vw;
     height: 150vh;
     display: flex;
-    /* Make the container a flexbox */
     flex-direction: column;
-    /* Arrange items vertically */
     justify-content: center;
-    /* Center vertically */
     align-items: center;
 }
 

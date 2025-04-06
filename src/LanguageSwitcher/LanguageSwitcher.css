@@ -1,4 +1,12 @@
-.languageSwitcherDiv {
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the Language-swither-component
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
+ .languageSwitcherDiv {
     padding-top: 20px;
     padding-right: 20px;
 }
@@ -7,7 +15,6 @@
 .button-container {
     display: flex;
     gap: 10px;
-    /* Adjust the gap between the buttons */
 }
 
 /* Common styles for the round buttons */
@@ -15,7 +22,6 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    /* Makes the button round */
     border: none;
     background-color: transparent;
     display: flex;
@@ -25,9 +31,7 @@
     padding: 0;
     position: relative;
     overflow: hidden;
-    /* Hide anything outside the circle */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Smooth transition */
 }
 
 /* Shimmer effect on hover */
@@ -55,7 +59,5 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Ensure the image covers the entire button */
     border-radius: 50%;
-    /* Clip the image to a circle */
 }

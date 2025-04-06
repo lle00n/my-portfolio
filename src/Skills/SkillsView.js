@@ -1,3 +1,11 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: SkillsView that displays the timeline and the SkillsIcons next to each other
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
 import './SkillsStyle.css';
 import Timeline from "./Timeline/Timeline.js";
 import SkillsIconView from "./SkillsIcons/SkillsIconView.js";

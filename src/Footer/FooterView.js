@@ -1,3 +1,11 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Footer component with the 3 buttons to get in contact
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
 import './FooterStyle.css';
 import MyThree from './Contact.js';
 import { useTranslation } from "react-i18next";
@@ -16,7 +24,6 @@ function Footer() {
         <a href="https://github.com/lle00n" target="_blank" rel="noopener noreferrer" className="contact-button github">
         </a>
       </div>
-      {/* <MyThree /> */}
     </div>
   );
 }

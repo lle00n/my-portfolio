@@ -1,3 +1,11 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: ProjectSlider-component to navigate through the different projects
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
 import { useState } from 'react';
 import navigateBack from '../Images/Icons/back.png';
 import navigateNext from '../Images/Icons/next.png';

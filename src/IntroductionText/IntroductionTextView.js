@@ -1,3 +1,11 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Introduction text with some informations about me
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
 import './IntroductionText.css';
 import { useTranslation } from "react-i18next";
 

@@ -1,6 +1,13 @@
-.skillsDiv {
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the SkillsView
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
+ .skillsDiv {
     display: flex;
-    /* Arrange items vertically */
     justify-content: center;
     width: 100vw;
     height: 150vh;
@@ -13,22 +20,15 @@
 .timeline {
     width: 50%;
     display: flex;
-    /* Make the container a flexbox */
     flex-direction: column;
-    /* Arrange items vertically */
     justify-content: center;
-    /* Center vertically */
-    /* Arrange items vertically */
 }
 
 .technologies {
     width: 50%;
     height: 150vh;
     display: flex;
-    /* Make the container a flexbox */
     flex-direction: column;
-    /* Arrange items vertically */
     justify-content: center;
-    /* Center vertically */
     align-items: center;
 }

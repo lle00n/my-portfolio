@@ -1,3 +1,11 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: App file that is the parent component and combines all other child components
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
 import './App.css';
 import ProjectSlider from './ProjectSlider/ProjectSliderView.js';
 import TypingTitle from './TypingTitle/TypingTitleView.js';

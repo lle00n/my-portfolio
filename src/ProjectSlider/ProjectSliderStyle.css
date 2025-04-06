@@ -1,4 +1,12 @@
-.ProjectSliderView {
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the ProjectSlider
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
+ .ProjectSliderView {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,11 +25,6 @@
     width: 1000px;
     height: 600px;
     background-color: rgba(211, 211, 211, 0.3);
-    /*padding: 20px;*/
-}
-
-#sliderContent {
-    /*display: flex;*/
 }
 
 .ProjectDetails {

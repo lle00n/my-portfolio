@@ -1,3 +1,11 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: File that is used for testing a 3d model but is not in use at the moment
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
 import * as THREE from 'three';
 
 import { useEffect, useRef } from "react";

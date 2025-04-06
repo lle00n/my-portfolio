@@ -1,4 +1,12 @@
-.skillsView {
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the SkillsIconView
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
+ .skillsView {
   width: 80%;
   height: 400px;
 }
@@ -6,9 +14,7 @@
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* 5 icons per row */
   gap: 20px;
-  /* Space between items */
   justify-items: center;
   align-items: center;
   padding: 20px;

@@ -1,5 +1,13 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: View for displaying the icons for all the skills I learned
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
 import React from "react";
-import "./SkillsIconView.css"; // Add this for styling
+import "./SkillsIconView.css";
 import { useTranslation } from "react-i18next";
 import SwiftLogo from '../../Images/Icons/skills/Swift.svg';
 import CSSLogo from '../../Images/Icons/skills/CSS.svg';
