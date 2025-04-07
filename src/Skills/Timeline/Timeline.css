@@ -20,4 +20,8 @@
     .skillsTitle {
         display: none;
     }
+
+    .vertical-timeline-element-title {
+        font-size: 15px;
+    }
 }
