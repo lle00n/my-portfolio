@@ -6,9 +6,22 @@
  * ----------------------------------------------------------------------------
  */
 
- .languageSwitcherDiv {
+.languageSwitcherDiv {
     padding-top: 20px;
     padding-right: 20px;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: auto;
+}
+
+.languageSwitcherDiv.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.languageSwitcherDiv.visible {
+    opacity: 1;
 }
 
 /* Container to align buttons side by side */
