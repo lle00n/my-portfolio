@@ -21,6 +21,13 @@
 }
 
 .introductionImage {
-    width: 50%;
+    width: 50vw;
     height: 300px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .introductionTextSection {
+       width: 70vw;
+   }
 }
