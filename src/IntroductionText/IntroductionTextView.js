@@ -31,7 +31,7 @@ function IntroductionText() {
       setOpacity(newOpacity);
     };
 
-    handleScroll(); // initial
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleScroll);
 
