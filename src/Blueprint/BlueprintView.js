@@ -5,7 +5,8 @@
  * Author: Léon Albert
  * ----------------------------------------------------------------------------
  */
-import React, { useEffect, useRef } from 'react';
+
+import React, { useEffect, useRef, useState } from 'react';
 import './BlueprintStyle.css';
 import { useTranslation } from "react-i18next";
 
@@ -13,6 +14,24 @@ const BluePrint = () => {
   const leftRef = useRef(null);
   const sectionRef = useRef(null);
   const { t } = useTranslation();
+  const [activeItem, setActiveItem] = useState(null);
+
+  const items = [
+    { id: "section-1", name: "Item 1", x: 10, y: 20, type: "text" },
+    { id: "section-1", name: "Item 2", x: 150, y: 100, type: "image" },
+    { id: "section-3", name: "Item 3", x: 300, y: 200, type: "text" },
+    { id: "section-4", name: "Item 4", x: 100, y: 300, type: "image" },
+    { id: "section-5", name: "Item 5", x: 500, y: 400, type: "text" }
+  ];
+
+  const bluePrintTexts = [
+    { id: "section-1", name: "Item 1", text: "1Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
+    { id: "section-2", name: "Item 1", text: "2Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
+    { id: "section-3", name: "Item 1", text: "3Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
+    { id: "section-4", name: "Item 1", text: "4Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
+    { id: "section-5", name: "Item 1", text: "5Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"}
+  ];
+
 
   useEffect(() => {
     let lastScrollTop = window.scrollY;
@@ -41,14 +60,14 @@ const BluePrint = () => {
       let translateX;
 
       // --- Modified sliding-in logic ---
-      // Previously: if (slideProgress < 0.1) { translateX = -100 + (slideProgress / 0.1) * 100; } else { translateX = 0; }
-      // Now the sliding takes 20% of scroll progress:
       if (slideProgress < 0.2) {
         translateX = -100 + (slideProgress / 0.2) * 100;
+        // Fade in only when sliding in
+        leftDiv.style.opacity = Math.max(0, slideProgress / 0.2); // Fade in during the slide-in
       } else {
         translateX = 0;
+        leftDiv.style.opacity = 1; // Stay fully opaque once the slide-in is complete
       }
-      // -----------------------------------
 
       // Slide out when scrolling up before center
       if (!scrollingDown && divTop > middleScreen - divHeight / 2) {
@@ -64,7 +83,6 @@ const BluePrint = () => {
         divTop <= middleScreen - divHeight / 2 &&
         scrollBottom < sectionBottom - windowHeight / 2;
 
-      // Adjust condition to slide out only after scrolling 50% into the section
       const shouldSlideOutUp = scrollBottom >= sectionBottom - windowHeight * 0.5;
 
       if (shouldStick) {
@@ -72,7 +90,6 @@ const BluePrint = () => {
         leftDiv.style.top = `${middleScreen - divHeight / 2}px`;
         leftDiv.style.left = '0';
       } else if (shouldSlideOutUp) {
-        // Start sliding up
         const overflow = scrollBottom - (sectionBottom - windowHeight * 0.5);
         const maxScroll = windowHeight / 2 + divHeight;
         const progressY = Math.min(1, overflow / maxScroll);
@@ -83,14 +100,40 @@ const BluePrint = () => {
         leftDiv.style.left = '0';
         leftDiv.style.transform = `translate(0%, ${translateY}px)`;
       } else {
-        // Reset when not sticking or sliding out
         leftDiv.style.position = 'relative';
         leftDiv.style.top = '0';
       }
     };
 
+    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveItem(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    items.forEach(item => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      items.forEach(item => {
+        const el = document.getElementById(item.id);
+        if (el) observer.unobserve(el);
+      });
+    };
   }, []);
 
   return (
@@ -100,29 +143,73 @@ const BluePrint = () => {
         <div className="blueprint-container">
           <div className="grid-overlay"></div>
           <div className="blueprint-content">
-            <p>Room Layout with Measurements</p>
-            <div className="blueprint-box">Living Room</div>
-            <div className="blueprint-box">Kitchen</div>
-            <div className="blueprint-box">Bedroom</div>
+          {items.map((item, index) => {
+            const isActive = item.id === activeItem;
+            return (
+              <div
+                key={index}
+                style={{
+                  position: "absolute",
+                  left: `${item.x}px`,
+                  top: `${item.y}px`,
+                  width: "50px",
+                  height: "50px",
+                  backgroundColor: isActive ? "#fff7cc" : "#eaeaea",
+                  border: `2px solid ${isActive ? "orange" : "#bbb"}`,
+                  borderRadius: "10px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transition: "all 0.3s ease",
+                  transform: isActive ? "scale(1.2)" : "scale(1)",
+                  boxShadow: isActive ? "0 0 12px rgba(255, 165, 0, 0.6)" : "none"
+                }}
+              >
+                {item.type === "text" ? (
+                  <span style={{ fontSize: "12px", textAlign: "center" }}>{item.name}</span>
+                ) : (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 3C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5ZM5 5H19V14L16 11L12 15L8 11L5 14V5Z"
+                      fill={isActive ? "orange" : "#999"}
+                    />
+                  </svg>
+                )}
+              </div>
+            );
+          })}
           </div>
         </div>
       </div>
       <div className="right-side">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio...
-        </p>
-        <p>
-          Fusce luctus vestibulum augue ut aliquet. Maecenas imperdiet, massa quis molestie faucibus...
-        </p>
-        <p>
-          Nullam euismod ante ut leo placerat, ac accumsan orci dictum...
-        </p>
-        <p>
-          Integer tempor, risus non sagittis scelerisque, erat velit vestibulum sapien...
-        </p>
-        <p>
-          Aenean sodales nisi ac interdum finibus. Nunc posuere malesuada ipsum, a dictum sapien dignissim ut...
-        </p>
+        {bluePrintTexts.map(bluePrintText => (
+          <div
+            key={bluePrintText.id}
+            id={bluePrintText.id}
+            className="scroll-section"
+            style={{
+              minHeight: "200px",
+              marginBottom: "40px",
+              background: "#fff",
+              padding: "20px",
+              border: "1px solid #ddd",
+              borderRadius: "8px",
+              boxShadow: bluePrintText.id === activeItem ? "0 4px 12px rgba(0,0,0,0.1)" : "none",
+              transition: "all 0.3s ease"
+            }}
+          >
+            <h3>{bluePrintText.name}</h3>
+            <p>
+              <strong>{bluePrintText.text}</strong>
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
