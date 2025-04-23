@@ -20,10 +20,12 @@ const BluePrint = () => {
   const [activeItem, setActiveItem] = useState(null);
 
   const items = [
-    { id: "section-0", name: "package", x: 10, y: 20, type: "image", image: packageSvg },
-    { id: "section-0", name: "gitPath", x: 150, y: 100, type: "image", image: gitPathSvg },
+    { id: "section-2", name: "package1", x: 10, y: 20, type: "image", image: packageSvg },
+    { id: "section-2", name: "package2", x: 10, y: 50, type: "image", image: packageSvg },
+    { id: "section-2", name: "package3", x: 10, y: 100, type: "image", image: packageSvg },
+    { id: "section-3", name: "gitPath", x: 150, y: 100, type: "image", image: gitPathSvg },
     { id: "section-1", name: "Item 3", x: 300, y: 200, type: "text" },
-    { id: "section-1", name: "githubLogo", x: 100, y: 300, type: "image", image: githubLogoSvg },
+    { id: "section-4", name: "githubLogo", x: 100, y: 300, type: "image", image: githubLogoSvg },
     { id: "section-1", name: "Item 5", x: 500, y: 400, type: "text" }
   ];
 
@@ -150,9 +152,6 @@ const BluePrint = () => {
                     top: `${item.y}px`,
                     width: "50px",
                     height: "50px",
-                    backgroundColor: isActive ? "#fff7cc" : "#eaeaea",
-                    border: `2px solid ${isActive ? "orange" : "#bbb"}`,
-                    borderRadius: "10px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -167,7 +166,7 @@ const BluePrint = () => {
                     <img
                       src={item.image}
                       alt={item.name}
-                      style={{ width: "40px", height: "40px" }}  // Adjust size as needed
+                      style={{ width: "40px", height: "40px"}}  // Adjust size as needed
                     />
                   )}
 
