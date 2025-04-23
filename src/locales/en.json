@@ -92,5 +92,32 @@
     }
   ],
   "blueprintTitle": "Website - Architecture",
+  "blueprintInformations": [
+    {
+      "id": "section-0",
+      "name": "Website - Architecture",
+      "text": "To best showcase my diverse skills in software development, I deliberately used a wide range of technologies when building this website – technologies I have learned and applied throughout my career."
+    },
+    {
+      "id": "section-1",
+      "name": "Frontend",
+      "text": "This website is based on ReactJS and was built entirely from scratch using HTML and CSS. I place great importance on a clear and maintainable architecture, achieved through a well-structured file system and meaningful naming of variables, classes, and components."
+    },
+    {
+      "id": "section-2",
+      "name": "Packages",
+      "text": "To optimize the user experience and simplify certain processes, I use selected packages that support animations and internationalization, among other things.\nUsed packages:\ni18next – for multilingual support\nreact-confetti – for visual effects\nreact-simple-typewriter – for animated typing effects\nreact-vertical-timeline-component – for displaying timelines"
+    },
+    {
+      "id": "section-3",
+      "name": "Version Control",
+      "text": "For version control, I use Git in combination with GitHub. I regularly sync changes with the remote repository on the origin branch.\nBy using feature branches, I ensure that new features are developed and tested independently, without compromising the stability of the main version."
+    },
+    {
+      "id": "section-4",
+      "name": "Hosting",
+      "text": "The website is hosted via GitHub Pages – a simple and efficient way to publish static websites directly from a Git repository."
+    }
+  ],
   "contactMeTitle": "Contact me"
 }

@@ -40,7 +40,7 @@
 .right-side {
   width: 40%;
   /* Right side takes the remaining 40% */
-  height: 300vh;
+  height: 200vh;
   /* Set right div height to 300vh */
   z-index: 1;
   padding: 20px;
@@ -88,4 +88,16 @@
   line-height: 100px;
   margin: 10px auto;
   position: relative;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    width: 100vw;
+    height: 250vh;
+  }
 }

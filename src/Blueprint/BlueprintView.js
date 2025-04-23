@@ -20,20 +20,14 @@ const BluePrint = () => {
   const [activeItem, setActiveItem] = useState(null);
 
   const items = [
-    { id: "section-1", name: "package", x: 10, y: 20, type: "image", image: packageSvg },
-    { id: "section-1", name: "gitPath", x: 150, y: 100, type: "image", image: gitPathSvg },
-    { id: "section-3", name: "Item 3", x: 300, y: 200, type: "text" },
-    { id: "section-4", name: "githubLogo", x: 100, y: 300, type: "image", image: githubLogoSvg },
-    { id: "section-5", name: "Item 5", x: 500, y: 400, type: "text" }
+    { id: "section-0", name: "package", x: 10, y: 20, type: "image", image: packageSvg },
+    { id: "section-0", name: "gitPath", x: 150, y: 100, type: "image", image: gitPathSvg },
+    { id: "section-1", name: "Item 3", x: 300, y: 200, type: "text" },
+    { id: "section-1", name: "githubLogo", x: 100, y: 300, type: "image", image: githubLogoSvg },
+    { id: "section-1", name: "Item 5", x: 500, y: 400, type: "text" }
   ];
 
-  const bluePrintTexts = [
-    { id: "section-1", name: "packageSvg", text: "1Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
-    { id: "section-2", name: "Item 1", text: "2Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
-    { id: "section-3", name: "Item 1", text: "3Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
-    { id: "section-4", name: "Item 1", text: "4Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
-    { id: "section-5", name: "Item 1", text: "5Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"}
-  ];
+  const blueprintInformations = t('blueprintInformations', { returnObjects: true });
 
 
   useEffect(() => {
@@ -108,7 +102,7 @@ const BluePrint = () => {
       }
     };
 
-    
+
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -138,73 +132,70 @@ const BluePrint = () => {
       });
     };
   }, []);
-  
+
   return (
     <div className="blueprint-section" ref={sectionRef}>
       <div className="left-side" ref={leftRef}>
-        <h2>{t("blueprintTitle")}</h2>
         <div className="blueprint-container">
           <div className="grid-overlay"></div>
           <div className="blueprint-content">
-          {items.map((item, index) => {
-            const isActive = item.id === activeItem;
-            return (
-              <div
-                key={index}
-                style={{
-                  position: "absolute",
-                  left: `${item.x}px`,
-                  top: `${item.y}px`,
-                  width: "50px",
-                  height: "50px",
-                  backgroundColor: isActive ? "#fff7cc" : "#eaeaea",
-                  border: `2px solid ${isActive ? "orange" : "#bbb"}`,
-                  borderRadius: "10px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transition: "all 0.3s ease",
-                  transform: isActive ? "scale(1.2)" : "scale(1)",
-                  boxShadow: isActive ? "0 0 12px rgba(255, 165, 0, 0.6)" : "none"
-                }}
-              >
-                {item.type === "text" ? (
-  <span style={{ fontSize: "12px", textAlign: "center" }}>{item.name}</span>
-) : (
-  <img
-    src={item.image}
-    alt={item.name}
-    style={{ width: "40px", height: "40px" }}  // Adjust size as needed
-  />
-)}
+            {items.map((item, index) => {
+              const isActive = item.id === activeItem;
+              return (
+                <div
+                  key={index}
+                  style={{
+                    position: "absolute",
+                    left: `${item.x}px`,
+                    top: `${item.y}px`,
+                    width: "50px",
+                    height: "50px",
+                    backgroundColor: isActive ? "#fff7cc" : "#eaeaea",
+                    border: `2px solid ${isActive ? "orange" : "#bbb"}`,
+                    borderRadius: "10px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    transition: "all 0.3s ease",
+                    transform: isActive ? "scale(1.2)" : "scale(1)",
+                    boxShadow: isActive ? "0 0 12px rgba(255, 165, 0, 0.6)" : "none"
+                  }}
+                >
+                  {item.type === "text" ? (
+                    <span style={{ fontSize: "12px", textAlign: "center" }}>{item.name}</span>
+                  ) : (
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      style={{ width: "40px", height: "40px" }}  // Adjust size as needed
+                    />
+                  )}
 
-              </div>
-            );
-          })}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
       <div className="right-side">
-        {bluePrintTexts.map(bluePrintText => (
+        {blueprintInformations.map(blueprintInformation => (
           <div
-            key={bluePrintText.id}
-            id={bluePrintText.id}
+            key={blueprintInformation.id}
+            id={blueprintInformation.id}
             className="scroll-section"
             style={{
               minHeight: "200px",
-              marginBottom: "40px",
-              background: "#fff",
               padding: "20px",
-              border: "1px solid #ddd",
               borderRadius: "8px",
-              boxShadow: bluePrintText.id === activeItem ? "0 4px 12px rgba(0,0,0,0.1)" : "none",
               transition: "all 0.3s ease"
             }}
           >
-            <h3>{bluePrintText.name}</h3>
-            <p>
-              <strong>{bluePrintText.text}</strong>
-            </p>
+            <h2>{blueprintInformation.name}</h2>
+            <div>
+              {blueprintInformation.text.split("\n").map((line, index) => (
+                <p key={index}>{line}</p>
+              ))}
+            </div>
           </div>
         ))}
       </div>
