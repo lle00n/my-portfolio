@@ -9,6 +9,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './BlueprintStyle.css';
 import { useTranslation } from "react-i18next";
+import packageSvg from '../Images/Icons/BlueprintIcons/package.svg';
+import gitPathSvg from '../Images/Icons/BlueprintIcons/gitPath.svg';
+import githubLogoSvg from '../Images/Icons/BlueprintIcons/githubLogo.svg';
 
 const BluePrint = () => {
   const leftRef = useRef(null);
@@ -17,15 +20,15 @@ const BluePrint = () => {
   const [activeItem, setActiveItem] = useState(null);
 
   const items = [
-    { id: "section-1", name: "Item 1", x: 10, y: 20, type: "text" },
-    { id: "section-1", name: "Item 2", x: 150, y: 100, type: "image" },
+    { id: "section-1", name: "package", x: 10, y: 20, type: "image", image: packageSvg },
+    { id: "section-1", name: "gitPath", x: 150, y: 100, type: "image", image: gitPathSvg },
     { id: "section-3", name: "Item 3", x: 300, y: 200, type: "text" },
-    { id: "section-4", name: "Item 4", x: 100, y: 300, type: "image" },
+    { id: "section-4", name: "githubLogo", x: 100, y: 300, type: "image", image: githubLogoSvg },
     { id: "section-5", name: "Item 5", x: 500, y: 400, type: "text" }
   ];
 
   const bluePrintTexts = [
-    { id: "section-1", name: "Item 1", text: "1Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
+    { id: "section-1", name: "packageSvg", text: "1Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
     { id: "section-2", name: "Item 1", text: "2Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
     { id: "section-3", name: "Item 1", text: "3Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
     { id: "section-4", name: "Item 1", text: "4Hfraklejfgioawdjf oajdfoasjdflkasjgfoiaejrgoiaerhjgoiwejgiowejfoiwJEFOISJDFOI"},
@@ -135,7 +138,7 @@ const BluePrint = () => {
       });
     };
   }, []);
-
+  
   return (
     <div className="blueprint-section" ref={sectionRef}>
       <div className="left-side" ref={leftRef}>
@@ -166,21 +169,15 @@ const BluePrint = () => {
                 }}
               >
                 {item.type === "text" ? (
-                  <span style={{ fontSize: "12px", textAlign: "center" }}>{item.name}</span>
-                ) : (
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 3C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5ZM5 5H19V14L16 11L12 15L8 11L5 14V5Z"
-                      fill={isActive ? "orange" : "#999"}
-                    />
-                  </svg>
-                )}
+  <span style={{ fontSize: "12px", textAlign: "center" }}>{item.name}</span>
+) : (
+  <img
+    src={item.image}
+    alt={item.name}
+    style={{ width: "40px", height: "40px" }}  // Adjust size as needed
+  />
+)}
+
               </div>
             );
           })}
