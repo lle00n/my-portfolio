@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import packageSvg from '../Images/Icons/BlueprintIcons/package.svg';
 import gitPathSvg from '../Images/Icons/BlueprintIcons/gitPath.svg';
 import githubLogoSvg from '../Images/Icons/BlueprintIcons/githubLogo.svg';
+import websiteSvg from '../Images/Icons/BlueprintIcons/website.svg';
 
 const BluePrint = () => {
   const leftRef = useRef(null);
@@ -20,13 +21,14 @@ const BluePrint = () => {
   const [activeItem, setActiveItem] = useState(null);
 
   const items = [
-    { id: "section-2", name: "package1", x: 10, y: 20, type: "image", image: packageSvg },
-    { id: "section-2", name: "package2", x: 10, y: 50, type: "image", image: packageSvg },
-    { id: "section-2", name: "package3", x: 10, y: 100, type: "image", image: packageSvg },
-    { id: "section-3", name: "gitPath", x: 150, y: 100, type: "image", image: gitPathSvg },
-    { id: "section-1", name: "Item 3", x: 300, y: 200, type: "text" },
-    { id: "section-4", name: "githubLogo", x: 100, y: 300, type: "image", image: githubLogoSvg },
-    { id: "section-1", name: "Item 5", x: 500, y: 400, type: "text" }
+    { id: "section-0", name: "website", x: 200, y: 150, width: 220, height: 220, type: "image", image: websiteSvg },
+    { id: "section-2", name: "package1", x: 10, y: 20, width: 50, height: 50, ttype: "image", image: packageSvg },
+    { id: "section-2", name: "package2", x: 10, y: 50, width: 50, height: 50, ttype: "image", image: packageSvg },
+    { id: "section-2", name: "package3", x: 10, y: 100, width: 50, height: 50, type: "image", image: packageSvg },
+    { id: "section-3", name: "gitPath", x: 270, y: 100, width: 50, height: 50, type: "image", image: gitPathSvg },
+    { id: "section-4", name: "Github pages", x: 310, y: 40, width: 200, height: 50, type: "text" },
+    { id: "section-4", name: "githubLogo", x: 247, y: 30, width: 70, height: 70, type: "image", image: githubLogoSvg },
+    { id: "section-1", name: "Item 5", x: 500, y: 400, width: 50, height: 50, type: "text" }
   ];
 
   const blueprintInformations = t('blueprintInformations', { returnObjects: true });
@@ -150,23 +152,23 @@ const BluePrint = () => {
                     position: "absolute",
                     left: `${item.x}px`,
                     top: `${item.y}px`,
-                    width: "50px",
-                    height: "50px",
+                    width: `${item.width}px`,
+                    height: `${item.height}px`,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     transition: "all 0.3s ease",
-                    transform: isActive ? "scale(1.2)" : "scale(1)",
-                    boxShadow: isActive ? "0 0 12px rgba(255, 165, 0, 0.6)" : "none"
+                    transform: isActive ? "scale(1.1)" : "scale(1)",
+                    //boxShadow: isActive ? "0 0 12px rgba(255, 165, 0, 0.6)" : "none"
                   }}
                 >
                   {item.type === "text" ? (
-                    <span style={{ fontSize: "12px", textAlign: "center" }}>{item.name}</span>
+                    <span style={{ fontSize: "30px", textAlign: "center", color: isActive ? "#800080" : "white" }}>{item.name}</span>
                   ) : (
                     <img
                       src={item.image}
                       alt={item.name}
-                      style={{ width: "40px", height: "40px"}}  // Adjust size as needed
+                      style={{ width: `${item.width}px`, height: `${item.height}px`, filter: isActive ? 'invert(53%) sepia(100%) saturate(559%) hue-rotate(2deg)' : 'grayscale(100%)'}}  // Adjust size as needed
                     />
                   )}
 
