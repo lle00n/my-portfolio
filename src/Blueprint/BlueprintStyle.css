@@ -9,25 +9,20 @@
 .blueprint-section {
   display: flex;
   height: 400vh;
-  /* Section height (300vh or 400vh) */
   position: relative;
   overflow: hidden;
 }
 
 .left-side {
   width: 60%;
-  /* Left side takes 60% of the width */
   height: 100vh;
-  /* Height of the left div */
   position: sticky;
   top: 0;
   font-size: 24px;
   font-weight: bold;
   transform: translateX(-100%);
   transition: transform 0s, opacity 0.0s ease-in-out;
-  /* Add opacity transition */
   opacity: 0;
-  /* Start as invisible */
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -39,9 +34,7 @@
 
 .right-side {
   width: 40%;
-  /* Right side takes the remaining 40% */
   height: 200vh;
-  /* Set right div height to 300vh */
   z-index: 1;
   padding: 20px;
   box-sizing: border-box;
@@ -49,11 +42,8 @@
   overflow-y: auto;
   position: absolute;
   right: 0;
-  /* Always stay on the right side */
   top: 50%;
-  /* Center vertically in the section */
   transform: translateY(-50%);
-  /* Offset by half of its own height to truly center */
 }
 
 .blueprint-container {

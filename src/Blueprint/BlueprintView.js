@@ -159,13 +159,11 @@ const BluePrint = () => {
                     justifyContent: "center",
                     transition: "all 0.3s ease",
                     transform: isActive ? "scale(1.1)" : "scale(1)",
-                    //boxShadow: isActive ? "0 0 12px rgba(255, 165, 0, 0.6)" : "none"
                   }}
                 >
                   {item.type === "text" ? (
                     <span style={{
                       fontSize: "30px", textAlign: "center"
-                      //,color: isActive ? "#800080" : "white"
                     }}>{item.name}</span>
                   ) : (
                     <img
@@ -173,7 +171,6 @@ const BluePrint = () => {
                       alt={item.name}
                       style={{
                         width: `${item.width}px`, height: `${item.height}px`
-                        //,filter: isActive ? 'invert(73%) sepia(100%) saturate(359%) hue-rotate(2deg)' : 'grayscale(100%)'
                       }}
                     />
                   )}
