@@ -21,14 +21,14 @@ const BluePrint = () => {
   const [activeItem, setActiveItem] = useState(null);
 
   const items = [
-    { id: "section-0", name: "website", x: 200, y: 150, width: 220, height: 220, type: "image", image: websiteSvg },
-    { id: "section-2", name: "package1", x: 10, y: 20, width: 50, height: 50, ttype: "image", image: packageSvg },
-    { id: "section-2", name: "package2", x: 10, y: 50, width: 50, height: 50, ttype: "image", image: packageSvg },
-    { id: "section-2", name: "package3", x: 10, y: 100, width: 50, height: 50, type: "image", image: packageSvg },
-    { id: "section-3", name: "gitPath", x: 270, y: 100, width: 50, height: 50, type: "image", image: gitPathSvg },
-    { id: "section-4", name: "Github pages", x: 310, y: 40, width: 200, height: 50, type: "text" },
-    { id: "section-4", name: "githubLogo", x: 247, y: 30, width: 70, height: 70, type: "image", image: githubLogoSvg },
-    { id: "section-1", name: "Item 5", x: 500, y: 400, width: 50, height: 50, type: "text" }
+    { id: "section-0", name: "website", x: 50, y: 160, width: 220, height: 220, type: "image", image: websiteSvg },
+    { id: "section-2", name: "package1", x: 60, y: 420, width: 50, height: 50, ttype: "image", image: packageSvg },
+    { id: "section-2", name: "package2", x: 115, y: 420, width: 50, height: 50, ttype: "image", image: packageSvg },
+    { id: "section-2", name: "package3", x: 170, y: 420, width: 50, height: 50, type: "image", image: packageSvg },
+    { id: "section-3", name: "gitPath", x: 120, y: 100, width: 50, height: 50, type: "image", image: gitPathSvg },
+    //{ id: "section-1", name: "Frontend", x: 350, y: 400, width: 50, height: 50, type: "text" },
+    { id: "section-4", name: "Github pages", x: 160, y: 40, width: 200, height: 50, type: "text" },
+    { id: "section-4", name: "githubLogo", x: 97, y: 30, width: 70, height: 70, type: "image", image: githubLogoSvg }
   ];
 
   const blueprintInformations = t('blueprintInformations', { returnObjects: true });
@@ -163,12 +163,18 @@ const BluePrint = () => {
                   }}
                 >
                   {item.type === "text" ? (
-                    <span style={{ fontSize: "30px", textAlign: "center", color: isActive ? "#800080" : "white" }}>{item.name}</span>
+                    <span style={{
+                      fontSize: "30px", textAlign: "center"
+                      //,color: isActive ? "#800080" : "white"
+                    }}>{item.name}</span>
                   ) : (
                     <img
                       src={item.image}
                       alt={item.name}
-                      style={{ width: `${item.width}px`, height: `${item.height}px`, filter: isActive ? 'invert(53%) sepia(100%) saturate(559%) hue-rotate(2deg)' : 'grayscale(100%)'}}  // Adjust size as needed
+                      style={{
+                        width: `${item.width}px`, height: `${item.height}px`
+                        //,filter: isActive ? 'invert(73%) sepia(100%) saturate(359%) hue-rotate(2deg)' : 'grayscale(100%)'
+                      }}
                     />
                   )}
 
