@@ -6,24 +6,54 @@
  * ----------------------------------------------------------------------------
  */
 
-.blueprintDiv {
+.blueprint-section {
+  display: flex;
+  height: 400vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-side {
+  width: 60%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  transform: translateX(-100%);
+  transition: transform 0s, opacity 0.0s ease-in-out;
+  opacity: 0;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 150vh;
+  justify-content: center;
+}
+
+
+
+.right-side {
+  width: 40%;
+  height: 200vh;
+  z-index: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .blueprint-container {
   position: relative;
-  width: 1000px;
-  height: 600px;
-  background-color: #0a2a43;
+  width: 750px;
+  height: 500px;
+  background-color: #5d80d2;
   color: white;
   border: 2px solid white;
   padding: 20px;
-  font-family: "Courier New", monospace;
   overflow: hidden;
 }
 
@@ -47,4 +77,16 @@
   line-height: 100px;
   margin: 10px auto;
   position: relative;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    width: 100vw;
+    height: 250vh;
+  }
 }

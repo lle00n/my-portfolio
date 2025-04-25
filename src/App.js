@@ -76,6 +76,7 @@ function App() {
         {/* <div ref={el => sectionRefs.current[4] = el}>
           <Blueprint />
         </div> */}
+          <Blueprint />
         <div ref={el => sectionRefs.current[5] = el}>
           <Footer />
         </div>

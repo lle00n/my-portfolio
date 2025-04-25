@@ -92,5 +92,32 @@
     }
   ],
   "blueprintTitle": "Webseite - Architektur",
+  "blueprintInformations": [
+    {
+      "id": "section-0",
+      "name": "Webseiten - Architektur",
+      "text": "Um meine vielfältigen Fähigkeiten in der Softwareentwicklung bestmöglich zu präsentieren, habe ich bei der Erstellung dieser Webseite gezielt auf eine breite Auswahl an Technologien zurückgegriffen – Technologien, die ich im Laufe meiner bisherigen Karriere erlernt und praktisch angewendet habe."
+    },
+    {
+      "id": "section-1",
+      "name": "Frontend",
+      "text": "Die Webseite basiert auf ReactJS und wurde vollständig von Grund auf mit HTML und CSS umgesetzt. Dabei lege ich besonderen Wert auf eine klare, wartbare Architektur durch eine durchdachte und übersichtliche Dateistruktur sowie sprechende Benennungen für Variablen, Klassen und Komponenten."
+    },
+    {
+      "id": "section-2",
+      "name": "Packages",
+      "text": "Zur Optimierung der Benutzererfahrung und zur Vereinfachung bestimmter Prozesse nutze ich ausgewählte Packages, die mir unter anderem Animationen und Internationalisierung erleichtern.\nVerwendete Packages:\ni18next – für Mehrsprachigkeit\nreact-confetti – für visuelle Effekte\nreact-simple-typewriter – für animierte Texteingaben\nreact-vertical-timeline-component – zur Darstellung zeitlicher Abläufe"
+    },
+    {
+      "id": "section-3",
+      "name": "Versionskontrolle",
+      "text": "Für die Versionsverwaltung setze ich auf Git in Kombination mit GitHub. Änderungen synchronisiere ich regelmäßig mit dem Remote-Repository auf dem origin-Branch.\nDurch die Verwendung von Feature-Branches stelle ich sicher, dass neue Funktionen unabhängig entwickelt und getestet werden können, ohne die Stabilität der Hauptversion zu gefährden."
+    },
+    {
+      "id": "section-4",
+      "name": "Hosting",
+      "text": "Gehostet wird die Webseite über GitHub Pages – eine einfache und effiziente Möglichkeit, statische Webseiten direkt aus einem Git-Repository heraus zu veröffentlichen."
+    }
+  ],
   "contactMeTitle": "Kontakt"
 }
