@@ -8,13 +8,13 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home.js';
-import SubPage from './Pages/ProjectDetails/ProjectDetails.js';
+import ProjectDetails from './Pages/ProjectDetails/ProjectDetails.js';
 
 function App() {
   return (
     <Routes>
       <Route path="/my-portfolio" element={<Home />} />
-      <Route path="/my-portfolio/subpage" element={<SubPage />} />
+      <Route path="/my-portfolio/project/:id" element={<ProjectDetails />} />
     </Routes>
   );
 }

@@ -10,6 +10,7 @@ import { useState } from 'react';
 import navigateBack from '../Images/Icons/back.png';
 import navigateNext from '../Images/Icons/next.png';
 import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
 
 import './ProjectSliderStyle.css';
 
@@ -44,9 +45,10 @@ function ProjectSlider() {
           <div className="ProjectInformation">
             <h3 className="ProjectTitle">{projectsArray[currentIndex].title}</h3>
             <div className="ProjectText">
-            {projectsArray[currentIndex].description.split("\n").map((line, index) => (
-              <p key={index}>{line}</p>
-            ))}
+              {projectsArray[currentIndex].description.split("\n").map((line, index) => (
+                <p key={index}>{line}</p>
+              ))}
+              <Link to={`/my-portfolio/project/${projectsArray[currentIndex].id}`} className="projectDetailsLink">view more</Link>
             </div>
           </div>
         </div>

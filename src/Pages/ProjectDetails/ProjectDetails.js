@@ -1,4 +1,4 @@
-function SubPage() {
+function ProjectDetails() {
   return (
     <div>
       <h1>This is the SubPage</h1>
@@ -7,4 +7,4 @@ function SubPage() {
   );
 }
 
-export default SubPage;
+export default ProjectDetails;

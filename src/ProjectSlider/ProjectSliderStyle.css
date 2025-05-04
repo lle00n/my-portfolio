@@ -6,7 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
- .ProjectSliderView {
+.ProjectSliderView {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,6 +73,10 @@
 
 .ProjectTitle {
     margin: 0px;
+}
+
+.projectDetailsLink {
+    color: lightgray;
 }
 
 /* Mobile styles */
