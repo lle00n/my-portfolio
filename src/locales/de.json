@@ -89,6 +89,16 @@
         "xcode"
       ],
       "github": "-"
+    },
+    {
+      "id": 1,
+      "title": "Unity game",
+      "description": "Ein eigenes 3rd person shooter game mit Hilfe von Unity. Dies ist noch in Planung.",
+      "languages": [
+        "unity",
+        "git"
+      ],
+      "github": "-"
     }
   ],
   "blueprintTitle": "Webseite - Architektur",

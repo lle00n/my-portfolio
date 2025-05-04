@@ -40,7 +40,10 @@ function ProjectSlider() {
       <div className="ProjectSlider">
         <div className="ProjectDetails">
           <div className="ProjectImageDiv">
-            <img className="ProjectImage" src={currentProjectImage} alt={`${projectsArray[currentIndex].title}Cover`} />
+            <img className="ProjectImage"
+              src={currentProjectImage}
+              alt={`${projectsArray[currentIndex].title}Cover`}
+            />
           </div>
           <div className="ProjectInformation">
             <h3 className="ProjectTitle">{projectsArray[currentIndex].title}</h3>
