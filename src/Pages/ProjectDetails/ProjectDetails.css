@@ -1,0 +1,32 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the ProjectDetails component
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+}
+
+.gradientBackground {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgb(83, 159, 231), purple);
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+}
+
+.projectDetailsContent {
+    color: lightgray;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: absolute;
+    background-color: transparent;
+  }
