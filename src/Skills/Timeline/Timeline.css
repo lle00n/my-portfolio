@@ -1,0 +1,27 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the Timeline
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
+.skillsTitle {
+    font-size: 80px;
+    text-align: center;
+}
+
+.vertical-timeline-element-title {
+    color: gray;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .skillsTitle {
+        display: none;
+    }
+
+    .vertical-timeline-element-title {
+        font-size: 15px;
+    }
+}

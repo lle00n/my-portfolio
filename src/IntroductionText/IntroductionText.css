@@ -1,0 +1,33 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the Introduction-text
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
+ .introductionTextDiv {
+    width: 100vw;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.introductionTextSection {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.introductionImage {
+    width: 50vw;
+    height: 300px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .introductionTextSection {
+       width: 70vw;
+   }
+}

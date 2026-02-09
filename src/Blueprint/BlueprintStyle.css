@@ -1,0 +1,92 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the Blueprint-component
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
+.blueprint-section {
+  display: flex;
+  height: 400vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-side {
+  width: 60%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  transform: translateX(-100%);
+  transition: transform 0s, opacity 0.0s ease-in-out;
+  opacity: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.right-side {
+  width: 40%;
+  height: 200vh;
+  z-index: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.blueprint-container {
+  position: relative;
+  width: 750px;
+  height: 500px;
+  background-color: #5d80d2;
+  color: white;
+  border: 2px solid white;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.blueprint-box {
+  width: 150px;
+  height: 100px;
+  border: 2px solid white;
+  text-align: center;
+  line-height: 100px;
+  margin: 10px auto;
+  position: relative;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    width: 100vw;
+    height: 250vh;
+  }
+}

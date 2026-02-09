@@ -1,0 +1,48 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the SkillsIconView
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
+.skillsView {
+  width: 80%;
+  height: 400px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.skill-item img {
+  width: 80px;
+  height: 80px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skill-item img.highlighted {
+  opacity: 1;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .skill-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timelineDescriptionText {
+    display: none;
+  }
+}

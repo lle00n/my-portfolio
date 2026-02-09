@@ -1,0 +1,133 @@
+{
+  "browserTitle": "My portfolio",
+  "typingTitleSmall": "Hello, I'm",
+  "aboutMeTitle": "About me",
+  "introductionText": "Hi, I'm Léon, 22 years old and a passionate software developer.\nMy journey into the world of computer science began with an apprenticeship as a computer scientist, which I completed with a vocational baccalaureate. After my training, I worked as a software developer for two years and was able to gain valuable experience in various projects.\nI am passionate about modern technologies, efficient software solutions and innovative developments. My focus is on clean code, scalable applications and a user-friendly design. You can find a selection of my previous work and more about my skills and experience in my portfolio.\nI look forward to exchanging ideas with like-minded people and exciting new projects.",
+  "timelineTitle": "My career",
+  "educationSections": [
+    {
+      "id": 1,
+      "title": "Apprenticeship - Basic year",
+      "date": "2018 - 2019",
+      "description": "Completed my education with a degree in Computer Science.",
+      "languages": [
+        "js",
+        "ts",
+        "java",
+        "php",
+        "html",
+        "css",
+        "git",
+        "scrum",
+        "mysql"
+      ],
+      "color": "purple"
+    },
+    {
+      "id": 2,
+      "title": "Apprenticeship - Mobile Team",
+      "date": "2019 - 2022",
+      "description": "Started working as a software engineer in a tech company.",
+      "languages": [
+        "js",
+        "java",
+        "git",
+        "scrum",
+        "swift",
+        "xcode",
+        "kotlin"
+      ],
+      "color": "purple"
+    },
+    {
+      "id": 3,
+      "title": "Software Developer",
+      "date": "2022 - 2024",
+      "description": "Started working as a software engineer in a tech company.",
+      "languages": [
+        "swift",
+        "js",
+        "ts",
+        "html",
+        "css",
+        "git",
+        "scrum",
+        "react",
+        "xcode",
+        "java"
+      ],
+      "color": "purple"
+    }
+  ],
+  "educationSectionInformations": [
+    {
+      "id": 0,
+      "description": "Hover over the elements to learn more."
+    },
+    {
+      "id": 1,
+      "description": "In the basic training year, I acquired fundamental skills that are essential for software development. From the front end with HTML/CSS and JavaScript to object-oriented programming with Java and PHP to databases and various project management methods, I was able to acquire a solid foundation."
+    },
+    {
+      "id": 2,
+      "description": "During my four-year apprenticeship, I spent three years working intensively in the field of mobile application development. My focus was on iOS development with Swift/SwiftUI, Objective-C and Xcode. I also gained experience in Android development with Kotlin and Java.\nAs a team, we worked according to the Scrum method. I was also able to further develop my skills in automated and manual UI testing. In this context, I also came into contact with CI/CD pipelines in GitLab, which ensured the functionality of the code during both continuous development and releases."
+    },
+    {
+      "id": 3,
+      "description": "In the two years after my apprenticeship, I had the opportunity to work in four different teams, gaining valuable experience and continuously expanding my skillset.\nIn the first two teams, I was involved in the development of mobile applications, working with SwiftUI, Xcode, Kotlin, Java and Android Studio. I was involved in the development of a trading app and an e-banking app.\nIn the other two teams, I focused on the development of web applications with React, TypeScript, JavaScript, HTML and CSS. I was also involved in the further development of a web application for a feedback tool, particularly in the implementation of feedback campaigns."
+    }
+  ],
+  "projectsTitle": "Projects",
+  "projects": [
+    {
+      "id": 0,
+      "title": "IntervalTimer",
+      "description": "This project is a simple but practical interval timer that I developed with SwiftUI in Xcode.\nThe timer is particularly suitable for use in sports, as it makes it possible to control training intervals. Users can set individually defined time intervals for activities and breaks, which makes training more efficient.\nThe user-friendly interface and ease of use make the timer a useful tool for athletes of all levels.",
+      "languages": [
+        "swift",
+        "git",
+        "xcode"
+      ],
+      "github": "-"
+    },
+    {
+      "id": 1,
+      "title": "Unity game",
+      "description": "An own 3rd person shooter game with the help of Unity. This is still in the planning stage.",
+      "languages": [
+        "unity",
+        "git"
+      ],
+      "github": "-"
+    }
+  ],
+  "blueprintTitle": "Website - Architecture",
+  "blueprintInformations": [
+    {
+      "id": "section-0",
+      "name": "Website - Architecture",
+      "text": "To best showcase my diverse skills in software development, I deliberately used a wide range of technologies when building this website – technologies I have learned and applied throughout my career."
+    },
+    {
+      "id": "section-1",
+      "name": "Frontend",
+      "text": "This website is based on ReactJS and was built entirely from scratch using HTML and CSS. I place great importance on a clear and maintainable architecture, achieved through a well-structured file system and meaningful naming of variables, classes, and components."
+    },
+    {
+      "id": "section-2",
+      "name": "Packages",
+      "text": "To optimize the user experience and simplify certain processes, I use selected packages that support animations and internationalization, among other things.\nUsed packages:\ni18next – for multilingual support\nreact-confetti – for visual effects\nreact-simple-typewriter – for animated typing effects\nreact-vertical-timeline-component – for displaying timelines"
+    },
+    {
+      "id": "section-3",
+      "name": "Version Control",
+      "text": "For version control, I use Git in combination with GitHub. I regularly sync changes with the remote repository on the origin branch.\nBy using feature branches, I ensure that new features are developed and tested independently, without compromising the stability of the main version."
+    },
+    {
+      "id": "section-4",
+      "name": "Hosting",
+      "text": "The website is hosted via GitHub Pages – a simple and efficient way to publish static websites directly from a Git repository."
+    }
+  ],
+  "contactMeTitle": "Contact me"
+}

@@ -1,0 +1,27 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Description: Styling of the TypingTitle
+ * ----------------------------------------------------------------------------
+ * Author: Léon Albert
+ * ----------------------------------------------------------------------------
+ */
+
+ .typingTitleDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.typingTitle {
+    font-size: 100px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .typingTitle {
+        font-size: 60px;
+    }
+}
