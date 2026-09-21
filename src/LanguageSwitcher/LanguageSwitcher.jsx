@@ -40,7 +40,11 @@ const LanguageSwitcher = () => {
     <div className={`languageSwitcherDiv ${visible ? "visible" : "hidden"}`}>
       <div className="button-container">
         <button className="round-button germany" onClick={() => changeLanguage("de")}>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/400px-Flag_of_Germany.svg.png" alt="German Flag" className="flag-image" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg"
+            alt="German Flag"
+            className="flag-image"
+          />
         </button>
         <button className="round-button uk" onClick={() => changeLanguage("en")}>
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/500px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="UK Flag" className="flag-image" />
