@@ -5,28 +5,204 @@
  * Author: Léon Albert
  * ----------------------------------------------------------------------------
  */
- @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
- html {
-     scroll-behavior: smooth;
- }
- 
- .container {
-     position: relative;
- }
- 
- .gradientBackground {
-   width: 100vw;
-   height: 100vh;
-   background-image: linear-gradient(rgb(83, 159, 231), purple);
-   overflow: hidden;
-   position: fixed;
-   z-index: -1;
- }
- 
- .projectDetailsContent {
-     color: lightgray;
-     font-family: 'Roboto Condensed', sans-serif;
-     position: absolute;
-     background-color: transparent;
-   }
+.projectDetailsPage {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  padding: clamp(24px, 5vw, 64px) 24px;
+  color: #f4f1ea;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.projectDetailsBackground {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  background-image: linear-gradient(rgb(83, 159, 231), purple);
+}
+
+.projectDetailsContent {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.projectDetailsBack {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f4f1ea;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.projectDetailsBack:hover,
+.projectDetailsBack:focus-visible {
+  color: #b9d9d3;
+}
+
+.projectDetailsHeader {
+  margin: 34px 0 28px;
+}
+
+.projectDetailsIndex {
+  margin: 0 0 8px;
+  color: #f0b47a;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.projectDetailsHeader h1 {
+  margin: 0;
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.projectDetailsOverview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: clamp(28px, 5vw, 72px);
+  padding: 28px 0;
+  border-top: 1px solid rgba(244, 241, 234, 0.38);
+}
+
+.projectDetailsGallery,
+.projectDetailsInformation {
+  min-width: 0;
+}
+
+.projectDetailsGallery h2,
+.projectDetailsSection h2 {
+  margin: 0 0 14px;
+  color: #b9d9d3;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.projectDetailsMainImage {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  place-items: center;
+  overflow: hidden;
+  background: rgba(12, 24, 34, 0.44);
+}
+
+.projectDetailsMainImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.projectDetailsThumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.projectDetailsThumbnail {
+  width: 76px;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(244, 241, 234, 0.45);
+  background: transparent;
+  cursor: pointer;
+}
+
+.projectDetailsThumbnail.is-selected {
+  border: 2px solid #b9d9d3;
+}
+
+.projectDetailsThumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectDetailsImageCount {
+  margin: 10px 0 0;
+  color: rgba(244, 241, 234, 0.7);
+  font-size: 12px;
+  text-align: right;
+}
+
+.projectDetailsSection + .projectDetailsSection {
+  margin-top: 30px;
+}
+
+.projectDetailsSection p {
+  margin: 0 0 12px;
+  color: rgba(244, 241, 234, 0.9);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.projectDetailsSpecs ul,
+.projectDetailsLinks ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.projectDetailsSpecs li {
+  padding: 5px 9px;
+  border: 1px solid rgba(244, 241, 234, 0.38);
+  font-size: 14px;
+}
+
+.projectDetailsLinks li a {
+  display: inline-block;
+  min-height: 42px;
+  box-sizing: border-box;
+  padding: 10px 13px;
+  border: 1px solid #f0b47a;
+  color: #f4f1ea;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.projectDetailsLinks li a:hover,
+.projectDetailsLinks li a:focus-visible {
+  background: #f0b47a;
+  color: #17242c;
+}
+
+.projectDetailsNotFound h1 {
+  margin-top: 80px;
+}
+
+.projectDetailsNotFound a {
+  color: #f4f1ea;
+}
+
+@media (max-width: 760px) {
+  .projectDetailsPage {
+    padding: 24px 18px 48px;
+  }
+
+  .projectDetailsHeader {
+    margin-top: 26px;
+  }
+
+  .projectDetailsOverview {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 22px;
+  }
+}
