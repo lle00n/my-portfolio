@@ -29,6 +29,7 @@ function ProjectSlider() {
   const projectsArray = t('projects', { returnObjects: true }) || [];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLandscapeImage, setIsLandscapeImage] = useState(false);
 
   const currentProject = projectsArray[currentIndex];
   const currentProjectImage = currentProject
@@ -57,12 +58,16 @@ function ProjectSlider() {
     <div className="ProjectSliderView">
       <h2 className="ProjectSliderTitle">{t("projectsTitle")}</h2>
       <div className="ProjectSlider">
-        <div className="ProjectDetails">
+        <div className={`ProjectDetails${isLandscapeImage ? ' isLandscape' : ''}`}>
           <div className="ProjectImageDiv">
             <img
-              className="ProjectImage"
+              className={`ProjectImage${isLandscapeImage ? ' isLandscape' : ''}`}
               src={currentProjectImage}
               alt={`${currentProject.title} cover`}
+              onLoad={(event) => {
+                const { naturalWidth, naturalHeight } = event.currentTarget;
+                setIsLandscapeImage(naturalWidth > naturalHeight);
+              }}
             />
           </div>
           <div className="ProjectInformation">
