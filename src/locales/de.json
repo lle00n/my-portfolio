@@ -87,8 +87,7 @@
         "swift",
         "git",
         "xcode"
-      ],
-      "github": "-"
+      ]
     },
     {
       "id": 1,
@@ -97,8 +96,17 @@
       "languages": [
         "unity",
         "git"
-      ],
-      "github": "-"
+      ]
+    }
+    ,
+    {
+      "id": 2,
+      "title": "Web Screen Test",
+      "description": "oter game mit Hilfe von Unity. Dies ist noch in Planung.",
+      "languages": [
+        "unity",
+        "git"
+      ]
     }
   ],
   "blueprintTitle": "Webseite - Architektur",

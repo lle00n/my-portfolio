@@ -100,14 +100,79 @@
   text-transform: uppercase;
 }
 
-.projectDetailsTitle {
-  margin: 0;
+.projectDetailsTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
   padding-bottom: 14px;
   border-bottom: 1px solid rgba(244, 241, 234, 0.38);
+}
+
+.projectDetailsTitle {
+  margin: 0;
   font-size: clamp(40px, 5vw, 64px);
   line-height: 1.15;
   font-weight: 500;
   overflow-wrap: anywhere;
+}
+
+.projectDetailsAppButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 88px;
+  min-width: 88px;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  background: rgba(199, 33, 229, 0.78);
+  color: #f4f1ea;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  transition: filter 180ms ease, transform 180ms ease;
+  flex-shrink: 0;
+}
+
+.projectDetailsAppButtonIcon {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 8px;
+  transform: translateY(1px);
+  box-sizing: border-box;
+  border: 1.5px solid #fff;
+  border-radius: 2px;
+}
+
+.projectDetailsAppButtonIcon::before {
+  position: absolute;
+  right: 1px;
+  bottom: 6px;
+  left: 1px;
+  height: 5px;
+  border: 1.5px solid #fff;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+  content: '';
+}
+
+.projectDetailsAppButton.is-disabled {
+  opacity: 1;
+  cursor: default;
+  pointer-events: none;
+  background: rgba(223, 117, 156, 0.82);
+}
+
+.projectDetailsAppButton:hover,
+.projectDetailsAppButton:focus-visible {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
 }
 
 .projectDetailsOverview {
@@ -123,6 +188,13 @@
 
 .projectDetailsOverview--desktop {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+@media (min-width: 521px) {
+  .projectDetailsOverview--desktop .projectDetailsInformation {
+    align-content: center;
+    grid-template-rows: auto auto;
+  }
 }
 
 .projectDetailsGallery,
@@ -303,7 +375,7 @@
   min-height: 42px;
   box-sizing: border-box;
   padding: 10px 13px;
-  border: 1px solid #f0b47a;
+  border: 1px solid #f4f1ea;
   color: #f4f1ea;
   font-size: 15px;
   text-decoration: none;
@@ -378,8 +450,20 @@
     gap: 12px;
   }
 
+  .projectDetailsTitleRow {
+    align-items: center;
+    gap: 10px;
+  }
+
   .projectDetailsTitle {
     font-size: clamp(34px, 8vw, 42px);
+  }
+
+  .projectDetailsAppButton {
+    width: 80px;
+    min-width: 80px;
+    padding: 9px 10px;
+    font-size: 13px;
   }
 
   .projectDetailsBack {
@@ -489,8 +573,17 @@
     grid-row: 1;
   }
 
-  .projectDetailsTitle {
+  .projectDetailsTitleRow {
     grid-column: 1 / -1;
+    flex-wrap: wrap;
+  }
+
+  .projectDetailsTitle {
+    flex: 1 1 100%;
+  }
+
+  .projectDetailsAppButton {
+    align-self: flex-start;
   }
 
   .projectDetailsMainImage {

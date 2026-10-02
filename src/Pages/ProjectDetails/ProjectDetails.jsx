@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 import LanguageSwitcher from '../../LanguageSwitcher/LanguageSwitcher.jsx';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
+import projectLinks from '../../projectLinks.js';
 
 const imageFiles = Object.entries(
   import.meta.glob('../../Images/Projects/*.{png,jpg,jpeg,webp}', {
@@ -217,11 +218,19 @@ function ProjectDetails() {
     );
   }
 
-  const links = [
-    { label: labels.source, href: project.github },
-    { label: labels.website, href: project.website },
-    { label: labels.demo, href: project.demo },
+  const projectLinkData = projectLinks[project.id] ?? {};
+  const appLinks = [
+    { label: labels.website, href: projectLinkData.website },
+    { label: labels.demo, href: projectLinkData.demo },
   ].filter(({ href }) => typeof href === 'string' && /^https?:\/\//i.test(href));
+
+  const links = [
+    { label: labels.source, href: projectLinkData.github },
+    ...appLinks,
+  ].filter(({ href }) => typeof href === 'string' && /^https?:\/\//i.test(href));
+
+  const primaryAction = appLinks[0] ?? null;
+  const hasPrimaryAction = Boolean(primaryAction);
 
   return (
     <main className="projectDetailsPage">
@@ -314,7 +323,25 @@ function ProjectDetails() {
           </section>
 
           <div className="projectDetailsInformation">
-            <h1 className="projectDetailsTitle">{project.title}</h1>
+            <div className="projectDetailsTitleRow">
+              <h1 className="projectDetailsTitle">{project.title}</h1>
+
+              <a
+                className={`projectDetailsAppButton${hasPrimaryAction ? '' : ' is-disabled'}`}
+                href={hasPrimaryAction ? primaryAction.href : '#'}
+                target={hasPrimaryAction ? '_blank' : undefined}
+                rel={hasPrimaryAction ? 'noreferrer' : undefined}
+                aria-label={hasPrimaryAction ? `Open ${project.title} app` : `No app link available for ${project.title}`}
+                onClick={(event) => {
+                  if (!hasPrimaryAction) {
+                    event.preventDefault();
+                  }
+                }}
+              >
+                {!hasPrimaryAction && <span className="projectDetailsAppButtonIcon" aria-hidden="true" />}
+                Get App
+              </a>
+            </div>
             <div className="projectDetailsInformationContent">
               <section className="projectDetailsSection" aria-label={labels.description}>
                 {(project.description || '')
