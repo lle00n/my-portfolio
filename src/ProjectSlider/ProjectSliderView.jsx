@@ -13,20 +13,31 @@ import { Link } from 'react-router-dom';
 
 import './ProjectSliderStyle.css';
 
+const projectImages = Object.entries(
+  import.meta.glob('../Images/Projects/*.{png,jpg,jpeg,webp}', {
+    eager: true,
+    import: 'default',
+  })
+);
+
+function normalizeProjectName(name) {
+  return name.replace(/\s+/g, '').toLowerCase();
+}
+
 function ProjectSlider() {
   const { t } = useTranslation();
   const projectsArray = t('projects', { returnObjects: true }) || [];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Dynamisches Bild
-  const currentProjectImage =
-    projectsArray[currentIndex]
-      ? new URL(
-          `../Images/Projects/${projectsArray[currentIndex].title}Cover.png`,
-          import.meta.url
-        ).href
-      : "";
+  const currentProject = projectsArray[currentIndex];
+  const currentProjectImage = currentProject
+    ? projectImages.find(([imagePath]) => {
+        const filename = imagePath.split('/').pop()?.replace(/\.[^.]+$/, '') ?? '';
+        return normalizeProjectName(filename).startsWith(normalizeProjectName(currentProject.title)) &&
+          filename.toLowerCase().includes('cover');
+      })?.[1] ?? ''
+    : '';
 
   function handleNextCall() {
     setCurrentIndex((prevIndex) =>
@@ -51,7 +62,7 @@ function ProjectSlider() {
             <img
               className="ProjectImage"
               src={currentProjectImage}
-              alt={`${projectsArray[currentIndex].title}Cover`}
+              alt={`${currentProject.title} cover`}
             />
           </div>
           <div className="ProjectInformation">
