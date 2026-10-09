@@ -2,6 +2,13 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## GitHub Pages
+
+The production build copies `index.html` to `404.html` so GitHub Pages can serve
+the React app for direct visits and reloads on client-side routes.
+
+Build and deploy with `npm run build` and `npm run deploy`.
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
