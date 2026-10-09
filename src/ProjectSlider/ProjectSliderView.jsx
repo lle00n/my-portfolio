@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 import './ProjectSliderStyle.css';
 
 const projectImages = Object.entries(
-  import.meta.glob('../Images/Projects/*.{png,jpg,jpeg,webp}', {
+  import.meta.glob('../Images/Projects/**/*.{png,jpg,jpeg,webp}', {
     eager: true,
     import: 'default',
   })
@@ -29,6 +29,7 @@ function ProjectSlider() {
   const projectsArray = t('projects', { returnObjects: true }) || [];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLandscapeImage, setIsLandscapeImage] = useState(false);
 
   const currentProject = projectsArray[currentIndex];
   const currentProjectImage = currentProject
@@ -57,26 +58,27 @@ function ProjectSlider() {
     <div className="ProjectSliderView">
       <h2 className="ProjectSliderTitle">{t("projectsTitle")}</h2>
       <div className="ProjectSlider">
-        <div className="ProjectDetails">
+        <div className={`ProjectDetails${isLandscapeImage ? ' isLandscape' : ''}`}>
           <div className="ProjectImageDiv">
             <img
-              className="ProjectImage"
+              className={`ProjectImage${isLandscapeImage ? ' isLandscape' : ''}`}
               src={currentProjectImage}
               alt={`${currentProject.title} cover`}
+              onLoad={(event) => {
+                const { naturalWidth, naturalHeight } = event.currentTarget;
+                setIsLandscapeImage(naturalWidth > naturalHeight);
+              }}
             />
           </div>
           <div className="ProjectInformation">
             <h3 className="ProjectTitle">{projectsArray[currentIndex].title}</h3>
             <div className="ProjectText">
-              {(projectsArray[currentIndex].description || "")
-                .split("\n")
+              {(projectsArray[currentIndex]?.description || '')
+                .split('\n')
+                .filter((line) => line.trim())
                 .map((line, index) => (
                   <p key={index}>{line}</p>
                 ))}
-
-              {projectsArray[currentIndex].description.split("\n").map((line, index) => (
-                <p key={index}>{line}</p>
-              ))}
               <Link to={`/my-portfolio/project/${projectsArray[currentIndex].id}`} className="projectDetailsLink">view more</Link>
             </div>
           </div>

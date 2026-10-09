@@ -9,6 +9,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Home from './Pages/Home/Home.jsx';
 import ProjectDetails from './Pages/ProjectDetails/ProjectDetails.jsx';
+import ProjectPrivacyPolicy from './Pages/ProjectDetails/ProjectPrivacyPolicy.jsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       {/* Hauptseiten */}
       <Route path="/my-portfolio" element={<Home />} />
       <Route path="/my-portfolio/project/:id" element={<ProjectDetails />} />
+      <Route path="/my-portfolio/project/:id/privacyPolicy" element={<ProjectPrivacyPolicy />} />
 
       {/* Fallback für unbekannte URLs */}
       <Route path="*" element={<Navigate to="/my-portfolio" replace />} />
