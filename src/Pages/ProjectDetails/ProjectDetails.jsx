@@ -16,13 +16,13 @@ import { useTranslation } from "react-i18next";
 import projectLinks from '../../projectLinks.js';
 
 const imageFiles = Object.entries(
-  import.meta.glob('../../Images/Projects/*.{png,jpg,jpeg,webp}', {
+  import.meta.glob('../../Images/Projects/**/*.{png,jpg,jpeg,webp}', {
     eager: true,
     import: 'default',
   })
 );
 const videoFiles = Object.entries(
-  import.meta.glob('../../Images/Projects/*.{mp4,webm,ogg}', {
+  import.meta.glob('../../Images/Projects/**/*.{mp4,webm,ogg}', {
     eager: true,
     import: 'default',
   })
@@ -61,6 +61,7 @@ const pageLabels = {
     noMedia: 'No gallery media available yet.',
     notFound: 'Project not found',
     returnHome: 'Return to portfolio',
+    privacyPolicy: 'Privacy Policy',
     openMedia: 'Open media',
     closeMedia: 'Close media viewer',
     previousMedia: 'Previous gallery item',
@@ -79,6 +80,7 @@ const pageLabels = {
     noMedia: 'Noch keine Galeriemedien verfügbar.',
     notFound: 'Projekt nicht gefunden',
     returnHome: 'Zurück zum Portfolio',
+    privacyPolicy: 'Datenschutzerklärung',
     openMedia: 'Medien öffnen',
     closeMedia: 'Medienansicht schließen',
     previousMedia: 'Vorheriges Galeriebild',
@@ -227,7 +229,8 @@ function ProjectDetails() {
   const links = [
     { label: labels.source, href: projectLinkData.github },
     ...appLinks,
-  ].filter(({ href }) => typeof href === 'string' && /^https?:\/\//i.test(href));
+    ...(project.id === 0 ? [{ label: labels.privacyPolicy, href: `/my-portfolio/project/${project.id}/privacyPolicy`, internal: true }] : []),
+  ].filter(({ href }) => typeof href === 'string' && (href.startsWith('/') || /^https?:\/\//i.test(href)));
 
   const primaryAction = appLinks[0] ?? null;
   const hasPrimaryAction = Boolean(primaryAction);
@@ -369,11 +372,15 @@ function ProjectDetails() {
                 <h2>{labels.links}</h2>
                 {links.length > 0 ? (
                   <ul>
-                    {links.map(({ label, href }) => (
+                    {links.map(({ label, href, internal }) => (
                       <li key={label}>
-                        <a href={href} target="_blank" rel="noreferrer">
-                          {label}<span aria-hidden="true"> ↗</span>
-                        </a>
+                        {internal ? (
+                          <Link to={href}>{label}</Link>
+                        ) : (
+                          <a href={href} target="_blank" rel="noreferrer">
+                            {label}<span aria-hidden="true"> ↗</span>
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>

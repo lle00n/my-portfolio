@@ -21,6 +21,46 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+.projectPrivacyPolicyPage {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-y: auto;
+}
+
+.projectPrivacyPolicyPage .projectDetailsContent {
+  height: auto;
+  min-height: calc(100vh - 56px);
+  min-height: calc(100dvh - 56px);
+}
+
+.projectPrivacyPolicyContent {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.projectPrivacyPolicyContent > .projectDetailsTitle {
+  margin-bottom: 1.5rem;
+}
+
+.projectPrivacyPolicyBody h2 {
+  margin: 1.5rem 0 0.5rem;
+  color: #b9d9d3;
+  font-size: 1.15rem;
+}
+
+.projectPrivacyPolicyBody p {
+  margin: 0 0 1rem;
+  color: rgba(244, 241, 234, 0.9);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.projectPrivacyPolicyBody a {
+  color: inherit;
+}
+
 .projectDetailsBackground {
   position: fixed;
   z-index: -1;
@@ -128,7 +168,7 @@
   padding: 0 10px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 999px;
-  background: rgba(199, 33, 229, 0.78);
+  background: rgba(184, 46, 230, 0.78);
   color: #f4f1ea;
   text-decoration: none;
   font-size: 13px;
@@ -166,7 +206,7 @@
   opacity: 1;
   cursor: default;
   pointer-events: none;
-  background: rgba(223, 117, 156, 0.82);
+  background: rgba(218, 141, 244, 0.78);
 }
 
 .projectDetailsAppButton:hover,

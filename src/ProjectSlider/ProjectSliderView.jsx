@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 import './ProjectSliderStyle.css';
 
 const projectImages = Object.entries(
-  import.meta.glob('../Images/Projects/*.{png,jpg,jpeg,webp}', {
+  import.meta.glob('../Images/Projects/**/*.{png,jpg,jpeg,webp}', {
     eager: true,
     import: 'default',
   })
@@ -73,15 +73,12 @@ function ProjectSlider() {
           <div className="ProjectInformation">
             <h3 className="ProjectTitle">{projectsArray[currentIndex].title}</h3>
             <div className="ProjectText">
-              {(projectsArray[currentIndex].description || "")
-                .split("\n")
+              {(projectsArray[currentIndex]?.description || '')
+                .split('\n')
+                .filter((line) => line.trim())
                 .map((line, index) => (
                   <p key={index}>{line}</p>
                 ))}
-
-              {projectsArray[currentIndex].description.split("\n").map((line, index) => (
-                <p key={index}>{line}</p>
-              ))}
               <Link to={`/my-portfolio/project/${projectsArray[currentIndex].id}`} className="projectDetailsLink">view more</Link>
             </div>
           </div>
