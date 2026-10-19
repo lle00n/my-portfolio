@@ -57,6 +57,7 @@ const pageLabels = {
     source: 'Source code',
     website: 'Website',
     demo: 'Live demo',
+    appAds: 'App-ads.txt',
     noLinks: 'No project links available yet.',
     noMedia: 'No gallery media available yet.',
     notFound: 'Project not found',
@@ -76,6 +77,7 @@ const pageLabels = {
     source: 'Quellcode',
     website: 'Webseite',
     demo: 'Live-Demo',
+    appAds: 'App-ads.txt',
     noLinks: 'Noch keine Projektlinks verfügbar.',
     noMedia: 'Noch keine Galeriemedien verfügbar.',
     notFound: 'Projekt nicht gefunden',
@@ -229,6 +231,7 @@ function ProjectDetails() {
   const links = [
     { label: labels.source, href: projectLinkData.github },
     ...appLinks,
+    ...(projectLinkData.appAds ? [{ label: labels.appAds, href: projectLinkData.appAds }] : []),
     ...(project.id === 0 ? [{ label: labels.privacyPolicy, href: `/my-portfolio/project/${project.id}/privacyPolicy`, internal: true }] : []),
   ].filter(({ href }) => typeof href === 'string' && (href.startsWith('/') || /^https?:\/\//i.test(href)));
 
